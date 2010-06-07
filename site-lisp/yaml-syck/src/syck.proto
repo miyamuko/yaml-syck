@@ -1,0 +1,115 @@
+SyckNode *
+syck_alloc_str()
+
+SyckNode *
+syck_alloc_seq()
+
+SyckNode *
+syck_alloc_str()
+
+void
+syck_free_node(SyckNode *n)
+
+SyckNode *
+syck_new_str(char *str, enum scalar_style style)
+
+SyckNode *
+syck_new_str2(char *str, long len, enum scalar_style style)
+
+void
+syck_replace_str(SyckNode *n, char *str, enum scalar_style style)
+
+void
+syck_replace_str2(SyckNode *n, char *str, long len, enum scalar_style style)
+
+char *
+syck_str_read(SyckNode *n)
+
+SyckNode *
+syck_new_map(SYMID key, SYMID value)
+
+void
+syck_map_empty(SyckNode *n)
+
+void
+syck_map_add(SyckNode *n, SYMID key, SYMID value)
+
+SYMID
+syck_map_read(SyckNode *n, enum map_part p, long index)
+
+void
+syck_map_assign(SyckNode *n, enum map_part p, long index, SYMID id)
+
+long
+syck_map_count(SyckNode *n)
+
+void
+syck_map_update(SyckNode *n, SyckNode *n2)
+
+SyckNode *
+syck_new_seq(SYMID val)
+
+void
+syck_seq_empty(SyckNode *n)
+
+void
+syck_seq_add(SyckNode *n, SYMID val)
+
+void
+syck_seq_assign(SyckNode *n, long index, SYMID val)
+
+SYMID
+syck_seq_read(SyckNode *n, long index)
+
+long
+syck_seq_count(SyckNode *n)
+
+
+SyckParser *
+syck_new_parser()
+
+void
+syck_free_parser(SyckParser *p)
+
+void
+syck_parser_implicit_typing(SyckParser *p, int on)
+
+void
+syck_parser_taguri_expansion(SyckParser *p, int on)
+
+void
+syck_parser_handler(SyckParser *p, SyckNodeHandler h)
+
+void
+syck_parser_error_handler(SyckParser *p, SyckErrorHandler h)
+
+void
+syck_parser_bad_anchor_handler(SyckParser *p, SyckBadAnchorHandler h)
+
+void
+syck_parser_file(SyckParser *p, FILE *f, SyckIoFileRead r)
+
+void
+syck_parser_str(SyckParser *p, char *ptr, long len, SyckIoStrRead r)
+
+void
+syck_parser_str_auto(SyckParser *p, char *ptr, SyckIoStrRead r)
+
+SYMID
+syck_parse(SyckParser *p)
+
+
+SyckEmitter *
+syck_new_emitter()
+
+SYMID
+syck_emitter_mark_node(SyckEmitter *e, st_data_t node)
+
+void
+syck_output_handler(SyckEmitter *e, SyckOutputHandler out)
+
+void
+syck_emitter_handler(SyckEmitter *e, SyckEmitterHandler h)
+
+void
+syck_free_emitter()

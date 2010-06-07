@@ -1,0 +1,25 @@
+CC       = gcc
+CFLAGS   =
+LDFLAGS  =
+INCLUDES = -Isyck-0.61+svn231+patches/lib
+LIBS     =
+DEF      = xyck.def
+TARGET   = xyck.dll
+OBJS     = xyck.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS) $(DEF)
+	dllwrap -k -def $(DEF) --driver-name $(CC) \
+		$(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+
+dist: $(TARGET)
+	cp $(TARGET) ../ffi
+
+clean:
+	rm -f $(TARGET) $(OBJS)
+
+.c.o:
+	$(CC) $(CFLAGS) $(INCLUDES) -c $<
+
+xyck.o: xyck.h

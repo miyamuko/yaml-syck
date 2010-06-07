@@ -1,0 +1,22 @@
+package: yaml-syck
+version: 0.1.0
+
+sources:
+  include:
+    - site-lisp/yaml-syck/**/*.l
+  exclude:
+    - site-lisp/yaml-syck/**/test-*.l
+
+document:
+  - site-lisp/yaml-syck/docs/README.rd
+
+files:
+  include:
+    - site-lisp/**/*.l
+    - site-lisp/**/*.lc
+    - site-lisp/**/ffi/*.dll
+    - site-lisp/**/docs/*
+    - site-lisp/**/src/*
+  exclude:
+    - site-lisp/yaml-syck-scratch.l
+    - site-lisp/yaml-syck/**/test-*.l

@@ -1,0 +1,527 @@
+2008-02-03  MIYAMUKO Katsuyuki
+
+	* yaml-syck 0.1.0 リリース!
+
+	* update copyright
+
+	* require を整理
+
+	* - クラッシュする問題の workaround を登録。
+	  - すべての chunk を保存し、最後に gc をする。
+	    gc がないとなぜかクラッシュする。
+
+2008-01-21  MIYAMUKO Katsuyuki
+
+	* yaml-syck 0.0.3 リリース!
+
+	* (syck-reload-dll): msvcrt, callable を load-library
+
+	* (syck-parser-set-string): make-string-chunk で作ったオブジェクトが GC されてしまい、
+	  クラッシュしていたのを修正。
+	  (make-c-string): make-string-chunk を wrap して :protect-gc が t の場合、大域変数に保存する。
+	  (protect-from-xyzzy-gc): 引数を大域変数に保存
+	  (free-protected-objects): 保存した変数をクリア
+
+2007-04-29  MIYAMUKO Katsuyuki
+
+	* add syck-dll, xyck-dll.
+
+	* no need to require "util/path"
+
+	* should require util/path.
+
+	* (unless (find-package ...)) なら defpackage するようにした。
+
+	* 1 行目の package: を user にした。
+
+2007-04-24  MIYAMUKO Katsuyuki
+
+	* * dll のアンロードをできるようにした。
+	  - yaml-syck-ffi:syck-unload-dll: dll を開放
+	  - yaml-syck-ffi:syck-reload-dll: dll を開放して再読み込みする
+
+	* *load-directory* と syck-dll-path-for を dll.l に移動。
+
+	* yaml-syck の dll 関数に dll-entry-point というプロパティをセット。
+	  dll.l 内で利用。
+
+	* dll の unload, reload するユーティリティ。
+
+2007-04-22  MIYAMUKO Katsuyuki
+
+	* * yaml-syck 0.0.2 リリース!
+	  * syck-parser-option で hash-table-test を指定できるようにした。
+	  * xyzzy ダンプ後にパスが変わった場合に dll のロードに失敗するのを修正。
+	  * syck-load-documents の :from オプションに :file も指定できるようにした。
+	  * util.l を分割。
+
+	* bumped version number to 0.0.2
+
+	* update document for 0.0.2.
+
+	* syck-parser-option で hash-table-test を指定できるようにした。
+
+	* syck-parser-option に hash-table-test を追加。
+
+	* xyzzy をダンプ後にパスが変わったら dll のロードに失敗するのを修正。
+
+	* - require "util/struct"
+	  - syck-load-documents の :from オプションに :file も受け付けるようにした。
+
+	* util.l を分割。sqlite3/util からコピー。
+
+	* remote old test file.
+
+	* mode line が変だったのを修正
+
+	* util.l を分割。sqlite3/util からコピー。
+
+2007-04-21  MIYAMUKO Katsuyuki
+
+	* * timestamp のフォーマットに :iso8601 を追加。
+	  iso8601 形式の文字列に変換する。
+	  * :map に :hash-table を指定したときに返る hash-table のテスト関数
+	  を equalp から equal に変更。
+
+	* :timestamp に :iso8601 を指定すると iso8601 形式の文字列に変換するようにした。
+
+	* - :map :hash-table を指定したときに返す hash-table の test を equalp から equal に変更。
+	  - make-hash-table のオプションは :length じゃなくて :size.
+
+2007-03-27  MIYAMUKO Katsuyuki
+
+	* update TODO.
+
+2007-03-25  MIYAMUKO Katsuyuki
+
+	* ドキュメントのタイポ修正。
+
+	* *.lc と XTAGS を無視
+
+	* -scratch は svn で管理しない。
+
+	* -scratch は svn で管理しない。
+
+	* update changelog.
+
+	* :true, :false の説明を更新。
+
+	* タイトルと SYNOPSIS をちょっと修正。
+
+	* add NEWS.
+
+	* add NEWS file.
+
+	* (syck-parser-option): rename, yes => true, no => false.
+
+	* rename README.txt => README.rd.
+
+	* - テーブルをやめた
+	  - syck-yaml-version がミスってたのを修正。
+
+	* file-not-found などについて記述。
+
+	* ドキュメント記述。
+
+2007-03-24  MIYAMUKO Katsuyuki
+
+	* (syck-convert-str): implicit-typing-p && implicit-keyword-p の場合のみ intern するようにした。
+
+	* taguri-expassion-p を削除。
+
+	* taguri-expansion-p を常に t に設定するようにした。
+
+	* (syck-current-line): 0 オリジンなので 1+ した。
+
+	* dist 追加。
+	  prepare 追加。
+
+	* APIENTRY を先に書くようにした。
+
+	* (syck-construct-map-hashtable0): マージキーのリスト内に map 以外があったらエラーにするようにした。
+	  (syck-symbol-value, syck-symbol-type): new accessor.
+
+	* (structure-description): 構造体の情報を alist で返す関数。新規。
+	  (export-structure0): 指定されたカテゴリの関数を export する。
+	  (export-structure): export-structure0 を利用。
+	  (export-condition): ditto.
+
+	* condition のアクセッサを export するようにした。
+
+	* (export-condition): new function.
+
+	* (*xyzzy-yaml-syck-badalias-type-id*): tag:xyzzy.yaml.org,2002:object:yaml-syck:badalias に変更。
+
+	* :string => :scalar
+
+	* ライブラリなので ni-autoload は不要。
+
+	* update copyright.
+
+	* - syck-alias => syck-recursive-alias
+	  - seen => parents.
+
+	* (syck-load-internal): callback を指定された場合は nil を返すようにした。
+
+	* (syck-load-internal0): 不正な YAML を与えて syck-load すると :eof が返ってきていたのを修正。
+
+	* (syck-construct-map-hashtable0):
+	  ---
+	  - &CENTER { x: 1, y: 2 }
+	  - &BIG { r: 10 }
+	  - # Merge multiple maps
+	    << : [ *CENTER, *BIG ]
+	    label: center/big
+
+	* hash-table や array で返すときに compose! が失敗していたのを修正。
+
+	* #1# とかになるのが、うざいので文字列は copy するようにした。
+
+	* (syck-parser-option): implicit-keyword-p を追加。
+	  (syck-convert-str): implicit-keyword-p かつ : から始まる場合は :keyword にした。
+
+	* (start-with): 引数の順番を subseq seq に変えた。
+
+	* - (syck-construct-map-hashtable, syck-construct-map-sexp): マージキーが後に出てきた場合は、
+	    それは無視すべき。以下の場合は x: 2 になる。
+	    - &A { x: 10 }
+	    - x: 2
+	      << : *A
+
+	* (hash-key-exist): gethash の戻り値は 1) key に関連付けられた値、2) 値が存在したかどうかなので、
+	  戻り値の二つ目を見れば ok。
+
+	* (start-with, hash-key-exist): new function.
+
+	* (syck-construct-map-sexp): uniq-by-key => merge-map.
+	  (syck-construct-map-hashtable0): リファクタリング、引数を key にして名前を変更。
+
+	* (syck-convert): implicit-typing-p を t にした場合、type がタグ付になって解析に失敗していたのを修正。
+
+	* Toggles expansion of types in full taguri.  This
+	  defaults to 1 and is recommended to stay as 1.
+
+2007-03-22  MIYAMUKO Katsuyuki
+
+	* update year.
+
+	* update changelog.
+
+	* syck-parser-option のコンストラクタとアクセッサを export した。
+
+	* (structure-definition, structure-accessors, export-structure): 構造体関連のユーティリティ。
+
+	* no need to export raise-xxx.
+
+	* (syck-parser-option): remove implicit-unicode-p option. this is perl only.
+
+	* seq-format => seq.
+
+	* (nullp): number 以外が指定された場合は zerop しない。
+
+	* (syck-parser-set-file, syck-parser-set-string): 引数チェックの強化。
+
+	* (syck-file-not-found-error, syck-recursive-anchor-error): 削除
+	  (syck-compose-error): 追加
+	  (syck-bad-alias-error): 親を syck-compose-error にした。
+
+	* syck-gsub => gsub.
+
+	* パース中に Ctrl-g した場合 [BUG] になるのを回避。
+
+	* (compose!): 循環参照を実装。
+
+	* (dump-hash): ハッシュのダンプ。
+
+	* no need to require api/convert.
+
+	* require "yaml-syck/conditions", "yaml-syck/api/convert".
+
+2007-03-21  MIYAMUKO Katsuyuki
+
+	* (get, x, distclean): new task.
+
+	* (clean): add -f to rm.
+
+	* (syck-constructor-function-sequence, syck-constructor-function-map): 位置を移動した。
+
+	* :hashtable => :hash-table.
+
+	* timestamp-format として :string を追加。
+
+	* parser 引数が足りなかったのを修正。
+
+	* manifest ファイル更新。
+
+	* - copyright を 2007 にした。
+	  - コメント修正。
+
+	* byte-compile できるようにした。
+
+	* コメント修正。
+
+	* syck-current-line, syck-current-column, syck-current-content を使うようにした。
+
+	* (syck-current-content): rename from syck-linect.
+	  (syck-current-column): new function.
+	  (syck-current-line): ditto.
+
+	* define-library を使って書き換え。
+
+	* (syck-load*): parser option をキーワードリストでも指定できるようにした。
+
+	* (syck-parser-option-schema): キーワード引数のとりうる値の制約を返す。
+
+	* (structure-slot-names): 構造体のメンバ名を取得する。
+	  (parse-keyword-list): list から alist への変換。
+
+	* syck-parser-option-timestamp-format を :list から :sexp にした。
+2007-04-24  MIYAMUKO Katsuyuki
+
+	* dll のアンロードをできるようにした。
+	- yaml-syck-ffi:syck-unload-dll: dll を開放
+	- yaml-syck-ffi:syck-reload-dll: dll を開放して再読み込みする
+
+2007-04-22  MIYAMUKO Katsuyuki
+
+	* yaml-syck 0.0.2 リリース!
+
+	* syck-parser-option で hash-table-test を指定できるようにした。
+
+	* xyzzy ダンプ後にパスが変わった場合に dll のロードに失敗するのを修正。
+
+	* syck-load-documents の :from オプションに :file も指定できるようにした。
+
+	* util.l を分割。
+
+2007-04-21  MIYAMUKO Katsuyuki
+
+	* timestamp のフォーマットに :iso8601 を追加。
+	iso8601 形式の文字列に変換する。
+
+	* :map に :hash-table を指定したときに返る hash-table のテスト関数
+	を equalp から equal に変更。
+
+2007-03-25  MIYAMUKO Katsuyuki
+
+	* yaml-syck 0.0.1 リリース!
+
+	* ドキュメント記述。
+
+	* yes => true, no => false
+
+2007-03-24  MIYAMUKO Katsuyuki
+
+	* implicit-typing-p && implicit-keyword-p の場合のみ intern するようにした。
+
+	* taguri-expassion-p を削除。
+
+	* 0 オリジンなので 1+ した。
+
+	* マージキーのリスト内に map 以外があったらエラーにするようにした。
+
+	* condition のアクセッサを export するようにした。
+
+	* *xyzzy-yaml-syck-badalias-type-id* を
+	 tag:xyzzy.yaml.org,2002:object:yaml-syck:badalias に変更。
+
+	*  ライブラリなので ni-autoload は不要。
+
+	* callback を指定された場合は nil を返すようにした。
+
+	* 不正な YAML を与えて syck-load すると :eof が返ってきていたのを修正。
+
+	* 配列形式のマージに対応。
+	---
+	- &CENTER { x: 1, y: 2 }
+	- &BIG { r: 10 }
+	- # Merge multiple maps
+	  << : [ *CENTER, *BIG ]
+	  label: center/big
+
+	* hash-table や array で返すときに compose! が失敗していたのを修正。
+
+	* 文字列は copy して返すようにした。
+
+	* implicit-keyword-p を追加。
+
+	* merge-key の解釈が間違っていたのを修正。
+	すでに存在する場合は上書きしてはいけない。以下は r: 10 になる。
+	---
+	- &BIG { r: 10 }
+	- r: 100
+	  << : *BIG
+
+	* taguri-expansion-p が t だとすべて str 扱いになっていたのを修正。
+
+	* taguri-expansion-p をデフォルト t にした。
+
+2007-03-22  MIYAMUKO Katsuyuki
+
+	* syck-parser-option のコンストラクタとアクセッサを export した。
+
+	* 例外関連を整理。
+
+	* 循環参照を実装。
+
+	* require を整理。
+
+2007-03-21  MIYAMUKO Katsuyuki
+
+	* timestamp-format として string を追加。
+
+	* とりあえず一通り完成。
+
+	* syck-load で parser option をキーワード引数で指定できるようにした。
+	(syck-load "foo: no" :no "NO")
+
+2007-03-17  MIYAMUKO Katsuyuki
+
+	* load-documents を実装。
+
+	* parser 周りをリファクタリング。
+
+	* symtbl から sexp の構築を constructor.l に移動。
+	array, hash-table のサポート。
+
+2007-03-16  MIYAMUKO Katsuyuki
+
+	* config.l を削除。
+	parser-option でマッピングを指定するようにした。
+
+2007-03-10  MIYAMUKO Katsuyuki
+
+	* スペシャル変数 *symid*, *symtbl*, *anchor* などを廃止。
+	parser 構造体の parser-context 内に保持するようにした。
+
+	* 型変換のタイミングを変更。
+	パース時 (resolver) からオブジェクトの再構築時 (loader) に移動した。
+
+2007-01-27  MIYAMUKO Katsuyuki
+
+	* parser 関連の構造体を type/* に分離。
+
+	* syck-version => syck-xyzzy-binding-version.
+	syck-lib-version => syck-version.
+
+2006-10-13  MIYAMUKO Katsuyuki
+
+	* hander.l まわりをリファクタリング。
+	hander.l の yaml 変換周りを resolver.l に移動。
+	hander.l の c-callable を ffi/callable.l に移動。
+
+2006-10-06  MIYAMUKO Katsuyuki
+
+	* syck-load-documents を実装するために loader.l をリファクタリング。
+
+	* 無駄な require を削除して依存関係を整理。
+
+	* depends.rb 追加。依存関係を視覚化する。
+
+	* global.l => config.l
+
+	* syck-timestamp 構造体を廃止。
+
+2006-10-03  MIYAMUKO Katsuyuki
+
+	* syck-parse-file -> syck-load など関数を RbYAML などとあわせた。
+
+	* parser -> loader。
+
+	* リファクタリング。
+
+	* package 構成変更。
+
+2006-09-21  MIYAMUKO Katsuyuki
+
+	* parse エラー時のエラーメッセージを変更。
+
+	* syck-parse-error に content と source を追加。
+	それぞれ「エラーが発生した内容」と「ファイル名」 (文字列の場合 "(string)")。
+
+2006-09-15  MIYAMUKO Katsuyuki
+
+	* default は未サポート。
+	(syck-parse-string "
+	- = : 10
+	  x : 20
+	  y : 30
+	")
+	;; => (((("x" . 20) ("y" . 30))))
+
+	* float (#fix, #exp) が文字列として扱われていたのを修正。
+
+	* 最後のドキュメントが 2 つ返していたのを修正。
+
+2006-09-14  MIYAMUKO Katsuyuki
+
+	* syck-eof-p を追加。とりあえず複数の YAML ドキュメントに対応。
+	API 検討中。
+
+	* 8 進数などがあるとエラーになっていたのを修正。
+
+2006-09-13  MIYAMUKO Katsuyuki
+
+	* merge 型に対応。
+	(yaml-syck::syck-parse-string "
+	- &A { x: 1 }
+	- x: 1
+	  y: 2
+	- << : *A
+	  y: 2
+	")
+	http://yaml.org/type/merge.html
+
+	* 再帰の検出がバグっていたのを修正。再帰してなくても再帰と判断され
+	ていた。
+
+2006-09-12  MIYAMUKO Katsuyuki
+
+	* 再帰的なアンカーは syck-recursive-anchor-error を throw
+	するようにした。
+
+2006-09-06  MIYAMUKO Katsuyuki
+
+	* syck のライセンスを doc/COPYING-SYCK として追加。
+
+	* syck を syck-0.61+svn231+patches に更新した。
+	http://pyyaml.org/download/pysyck/syck-0.61+svn231+patches.tar.gz
+
+2006-09-05  MIYAMUKO Katsuyuki
+
+	* カンマ区切りの数値に対応した。
+
+	* 自己参照や未定義アンカーは syck-bad-anchor-error を throw
+	するようにし。
+
+	* parse error 時には syck-parse-error を throw するようにした。
+
+	* syck.dll と xyck.dll をビルドするための makefile 追加。
+
+	* api/version.l 追加。
+
+	* xyck.dll を追加。
+
+2006-08-29  MIYAMUKO Katsuyuki
+
+	* ファイル名を指定してパースできるようにした。
+
+	* timestamp をリスト形式で返すオプションを追加。
+	- *yaml-syck-timestamp-format* の値で変更できる。
+	-- :universal-time => universal time 
+	-- :struct         => syck-timestamp 構造体
+	-- :list           => list 形式
+
+2006-07-22  MIYAMUKO Katsuyuki
+
+	* yaml-syck-api を定義してリファクタリングが大体終了。
+	構造体は最低限だけ wrap する。
+	内部でしか使わないのなら chunk のまま扱うことにした。
+
+2006-07-11  MIYAMUKO Katsuyuki
+
+	* parser は一通り動くようになった。
+	前方参照と自己参照は :badalias を返すようにした。
+
+	* yaml-syck 作成開始
+

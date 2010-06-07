@@ -1,0 +1,11 @@
+EXPORTS
+	xyck_yaml_major
+	xyck_yaml_minor
+
+	xyck_version
+	xyck_yaml_domain
+
+	xyck_eof
+	xyck_linect
+	xyck_cursor
+	xyck_lineptr

@@ -1,0 +1,6 @@
+# http://yaml.org/type/bool.html
+
+canonical: y
+answer: NO
+logical: True
+option: on
