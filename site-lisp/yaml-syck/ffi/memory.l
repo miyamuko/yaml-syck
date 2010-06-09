@@ -27,7 +27,7 @@
 
 (defun free-protected-objects ()
   (setf *protect-objects* nil)
-  (gc))
+  (gc t))
 
 
 (provide "yaml-syck/ffi/memory")
