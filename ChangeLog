@@ -1,30 +1,30 @@
 2008-02-10  MIYAMUKO Katsuyuki
 
-	* (free-protected-objects): gc ‚ğ nomsg ‚ÅÀs
+	* (free-protected-objects): gc ã‚’ nomsg ã§å®Ÿè¡Œ
 
 2008-02-03  MIYAMUKO Katsuyuki
 
-	* yaml-syck 0.1.0 ƒŠƒŠ[ƒX!
+	* yaml-syck 0.1.0 ãƒªãƒªãƒ¼ã‚¹!
 
 	* update copyright
 
-	* require ‚ğ®—
+	* require ã‚’æ•´ç†
 
-	* - ƒNƒ‰ƒbƒVƒ…‚·‚é–â‘è‚Ì workaround ‚ğ“o˜^B
-	  - ‚·‚×‚Ä‚Ì chunk ‚ğ•Û‘¶‚µAÅŒã‚É gc ‚ğ‚·‚éB
-	    gc ‚ª‚È‚¢‚Æ‚È‚º‚©ƒNƒ‰ƒbƒVƒ…‚·‚éB
+	* - ã‚¯ãƒ©ãƒƒã‚·ãƒ¥ã™ã‚‹å•é¡Œã® workaround ã‚’ç™»éŒ²ã€‚
+	  - ã™ã¹ã¦ã® chunk ã‚’ä¿å­˜ã—ã€æœ€å¾Œã« gc ã‚’ã™ã‚‹ã€‚
+	    gc ãŒãªã„ã¨ãªãœã‹ã‚¯ãƒ©ãƒƒã‚·ãƒ¥ã™ã‚‹ã€‚
 
 2008-01-21  MIYAMUKO Katsuyuki
 
-	* yaml-syck 0.0.3 ƒŠƒŠ[ƒX!
+	* yaml-syck 0.0.3 ãƒªãƒªãƒ¼ã‚¹!
 
-	* (syck-reload-dll): msvcrt, callable ‚ğ load-library
+	* (syck-reload-dll): msvcrt, callable ã‚’ load-library
 
-	* (syck-parser-set-string): make-string-chunk ‚Åì‚Á‚½ƒIƒuƒWƒFƒNƒg‚ª GC ‚³‚ê‚Ä‚µ‚Ü‚¢A
-	  ƒNƒ‰ƒbƒVƒ…‚µ‚Ä‚¢‚½‚Ì‚ğC³B
-	  (make-c-string): make-string-chunk ‚ğ wrap ‚µ‚Ä :protect-gc ‚ª t ‚Ìê‡A‘åˆæ•Ï”‚É•Û‘¶‚·‚éB
-	  (protect-from-xyzzy-gc): ˆø”‚ğ‘åˆæ•Ï”‚É•Û‘¶
-	  (free-protected-objects): •Û‘¶‚µ‚½•Ï”‚ğƒNƒŠƒA
+	* (syck-parser-set-string): make-string-chunk ã§ä½œã£ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒ GC ã•ã‚Œã¦ã—ã¾ã„ã€
+	  ã‚¯ãƒ©ãƒƒã‚·ãƒ¥ã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
+	  (make-c-string): make-string-chunk ã‚’ wrap ã—ã¦ :protect-gc ãŒ t ã®å ´åˆã€å¤§åŸŸå¤‰æ•°ã«ä¿å­˜ã™ã‚‹ã€‚
+	  (protect-from-xyzzy-gc): å¼•æ•°ã‚’å¤§åŸŸå¤‰æ•°ã«ä¿å­˜
+	  (free-protected-objects): ä¿å­˜ã—ãŸå¤‰æ•°ã‚’ã‚¯ãƒªã‚¢
 
 2007-04-29  MIYAMUKO Katsuyuki
 
@@ -34,63 +34,63 @@
 
 	* should require util/path.
 
-	* (unless (find-package ...)) ‚È‚ç defpackage ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (unless (find-package ...)) ãªã‚‰ defpackage ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* 1 s–Ú‚Ì package: ‚ğ user ‚É‚µ‚½B
+	* 1 è¡Œç›®ã® package: ã‚’ user ã«ã—ãŸã€‚
 
 2007-04-24  MIYAMUKO Katsuyuki
 
-	* * dll ‚ÌƒAƒ“ƒ[ƒh‚ğ‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	  - yaml-syck-ffi:syck-unload-dll: dll ‚ğŠJ•ú
-	  - yaml-syck-ffi:syck-reload-dll: dll ‚ğŠJ•ú‚µ‚ÄÄ“Ç‚İ‚İ‚·‚é
+	* * dll ã®ã‚¢ãƒ³ãƒ­ãƒ¼ãƒ‰ã‚’ã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  - yaml-syck-ffi:syck-unload-dll: dll ã‚’é–‹æ”¾
+	  - yaml-syck-ffi:syck-reload-dll: dll ã‚’é–‹æ”¾ã—ã¦å†èª­ã¿è¾¼ã¿ã™ã‚‹
 
-	* *load-directory* ‚Æ syck-dll-path-for ‚ğ dll.l ‚ÉˆÚ“®B
+	* *load-directory* ã¨ syck-dll-path-for ã‚’ dll.l ã«ç§»å‹•ã€‚
 
-	* yaml-syck ‚Ì dll ŠÖ”‚É dll-entry-point ‚Æ‚¢‚¤ƒvƒƒpƒeƒB‚ğƒZƒbƒgB
-	  dll.l “à‚Å—˜—pB
+	* yaml-syck ã® dll é–¢æ•°ã« dll-entry-point ã¨ã„ã†ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’ã‚»ãƒƒãƒˆã€‚
+	  dll.l å†…ã§åˆ©ç”¨ã€‚
 
-	* dll ‚Ì unload, reload ‚·‚éƒ†[ƒeƒBƒŠƒeƒBB
+	* dll ã® unload, reload ã™ã‚‹ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
 
 2007-04-22  MIYAMUKO Katsuyuki
 
-	* * yaml-syck 0.0.2 ƒŠƒŠ[ƒX!
-	  * syck-parser-option ‚Å hash-table-test ‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	  * xyzzy ƒ_ƒ“ƒvŒã‚ÉƒpƒX‚ª•Ï‚í‚Á‚½ê‡‚É dll ‚Ìƒ[ƒh‚É¸”s‚·‚é‚Ì‚ğC³B
-	  * syck-load-documents ‚Ì :from ƒIƒvƒVƒ‡ƒ“‚É :file ‚àw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	  * util.l ‚ğ•ªŠ„B
+	* * yaml-syck 0.0.2 ãƒªãƒªãƒ¼ã‚¹!
+	  * syck-parser-option ã§ hash-table-test ã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  * xyzzy ãƒ€ãƒ³ãƒ—å¾Œã«ãƒ‘ã‚¹ãŒå¤‰ã‚ã£ãŸå ´åˆã« dll ã®ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã™ã‚‹ã®ã‚’ä¿®æ­£ã€‚
+	  * syck-load-documents ã® :from ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã« :file ã‚‚æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  * util.l ã‚’åˆ†å‰²ã€‚
 
 	* bumped version number to 0.0.2
 
 	* update document for 0.0.2.
 
-	* syck-parser-option ‚Å hash-table-test ‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* syck-parser-option ã§ hash-table-test ã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* syck-parser-option ‚É hash-table-test ‚ğ’Ç‰ÁB
+	* syck-parser-option ã« hash-table-test ã‚’è¿½åŠ ã€‚
 
-	* xyzzy ‚ğƒ_ƒ“ƒvŒã‚ÉƒpƒX‚ª•Ï‚í‚Á‚½‚ç dll ‚Ìƒ[ƒh‚É¸”s‚·‚é‚Ì‚ğC³B
+	* xyzzy ã‚’ãƒ€ãƒ³ãƒ—å¾Œã«ãƒ‘ã‚¹ãŒå¤‰ã‚ã£ãŸã‚‰ dll ã®ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã™ã‚‹ã®ã‚’ä¿®æ­£ã€‚
 
 	* - require "util/struct"
-	  - syck-load-documents ‚Ì :from ƒIƒvƒVƒ‡ƒ“‚É :file ‚àó‚¯•t‚¯‚é‚æ‚¤‚É‚µ‚½B
+	  - syck-load-documents ã® :from ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã« :file ã‚‚å—ã‘ä»˜ã‘ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* util.l ‚ğ•ªŠ„Bsqlite3/util ‚©‚çƒRƒs[B
+	* util.l ã‚’åˆ†å‰²ã€‚sqlite3/util ã‹ã‚‰ã‚³ãƒ”ãƒ¼ã€‚
 
 	* remote old test file.
 
-	* mode line ‚ª•Ï‚¾‚Á‚½‚Ì‚ğC³
+	* mode line ãŒå¤‰ã ã£ãŸã®ã‚’ä¿®æ­£
 
-	* util.l ‚ğ•ªŠ„Bsqlite3/util ‚©‚çƒRƒs[B
+	* util.l ã‚’åˆ†å‰²ã€‚sqlite3/util ã‹ã‚‰ã‚³ãƒ”ãƒ¼ã€‚
 
 2007-04-21  MIYAMUKO Katsuyuki
 
-	* * timestamp ‚ÌƒtƒH[ƒ}ƒbƒg‚É :iso8601 ‚ğ’Ç‰ÁB
-	  iso8601 Œ`®‚Ì•¶š—ñ‚É•ÏŠ·‚·‚éB
-	  * :map ‚É :hash-table ‚ğw’è‚µ‚½‚Æ‚«‚É•Ô‚é hash-table ‚ÌƒeƒXƒgŠÖ”
-	  ‚ğ equalp ‚©‚ç equal ‚É•ÏXB
+	* * timestamp ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã« :iso8601 ã‚’è¿½åŠ ã€‚
+	  iso8601 å½¢å¼ã®æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹ã€‚
+	  * :map ã« :hash-table ã‚’æŒ‡å®šã—ãŸã¨ãã«è¿”ã‚‹ hash-table ã®ãƒ†ã‚¹ãƒˆé–¢æ•°
+	  ã‚’ equalp ã‹ã‚‰ equal ã«å¤‰æ›´ã€‚
 
-	* :timestamp ‚É :iso8601 ‚ğw’è‚·‚é‚Æ iso8601 Œ`®‚Ì•¶š—ñ‚É•ÏŠ·‚·‚é‚æ‚¤‚É‚µ‚½B
+	* :timestamp ã« :iso8601 ã‚’æŒ‡å®šã™ã‚‹ã¨ iso8601 å½¢å¼ã®æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* - :map :hash-table ‚ğw’è‚µ‚½‚Æ‚«‚É•Ô‚· hash-table ‚Ì test ‚ğ equalp ‚©‚ç equal ‚É•ÏXB
-	  - make-hash-table ‚ÌƒIƒvƒVƒ‡ƒ“‚Í :length ‚¶‚á‚È‚­‚Ä :size.
+	* - :map :hash-table ã‚’æŒ‡å®šã—ãŸã¨ãã«è¿”ã™ hash-table ã® test ã‚’ equalp ã‹ã‚‰ equal ã«å¤‰æ›´ã€‚
+	  - make-hash-table ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¯ :length ã˜ã‚ƒãªãã¦ :size.
 
 2007-03-27  MIYAMUKO Katsuyuki
 
@@ -98,19 +98,19 @@
 
 2007-03-25  MIYAMUKO Katsuyuki
 
-	* ƒhƒLƒ…ƒƒ“ƒg‚Ìƒ^ƒCƒ|C³B
+	* ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ã‚¿ã‚¤ãƒä¿®æ­£ã€‚
 
-	* *.lc ‚Æ XTAGS ‚ğ–³‹
+	* *.lc ã¨ XTAGS ã‚’ç„¡è¦–
 
-	* -scratch ‚Í svn ‚ÅŠÇ—‚µ‚È‚¢B
+	* -scratch ã¯ svn ã§ç®¡ç†ã—ãªã„ã€‚
 
-	* -scratch ‚Í svn ‚ÅŠÇ—‚µ‚È‚¢B
+	* -scratch ã¯ svn ã§ç®¡ç†ã—ãªã„ã€‚
 
 	* update changelog.
 
-	* :true, :false ‚Ìà–¾‚ğXVB
+	* :true, :false ã®èª¬æ˜ã‚’æ›´æ–°ã€‚
 
-	* ƒ^ƒCƒgƒ‹‚Æ SYNOPSIS ‚ğ‚¿‚å‚Á‚ÆC³B
+	* ã‚¿ã‚¤ãƒˆãƒ«ã¨ SYNOPSIS ã‚’ã¡ã‚‡ã£ã¨ä¿®æ­£ã€‚
 
 	* add NEWS.
 
@@ -120,54 +120,54 @@
 
 	* rename README.txt => README.rd.
 
-	* - ƒe[ƒuƒ‹‚ğ‚â‚ß‚½
-	  - syck-yaml-version ‚ªƒ~ƒX‚Á‚Ä‚½‚Ì‚ğC³B
+	* - ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ã‚„ã‚ãŸ
+	  - syck-yaml-version ãŒãƒŸã‚¹ã£ã¦ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* file-not-found ‚È‚Ç‚É‚Â‚¢‚Ä‹LqB
+	* file-not-found ãªã©ã«ã¤ã„ã¦è¨˜è¿°ã€‚
 
-	* ƒhƒLƒ…ƒƒ“ƒg‹LqB
+	* ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆè¨˜è¿°ã€‚
 
 2007-03-24  MIYAMUKO Katsuyuki
 
-	* (syck-convert-str): implicit-typing-p && implicit-keyword-p ‚Ìê‡‚Ì‚İ intern ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (syck-convert-str): implicit-typing-p && implicit-keyword-p ã®å ´åˆã®ã¿ intern ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* taguri-expassion-p ‚ğíœB
+	* taguri-expassion-p ã‚’å‰Šé™¤ã€‚
 
-	* taguri-expansion-p ‚ğí‚É t ‚Éİ’è‚·‚é‚æ‚¤‚É‚µ‚½B
+	* taguri-expansion-p ã‚’å¸¸ã« t ã«è¨­å®šã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (syck-current-line): 0 ƒIƒŠƒWƒ“‚È‚Ì‚Å 1+ ‚µ‚½B
+	* (syck-current-line): 0 ã‚ªãƒªã‚¸ãƒ³ãªã®ã§ 1+ ã—ãŸã€‚
 
-	* dist ’Ç‰ÁB
-	  prepare ’Ç‰ÁB
+	* dist è¿½åŠ ã€‚
+	  prepare è¿½åŠ ã€‚
 
-	* APIENTRY ‚ğæ‚É‘‚­‚æ‚¤‚É‚µ‚½B
+	* APIENTRY ã‚’å…ˆã«æ›¸ãã‚ˆã†ã«ã—ãŸã€‚
 
-	* (syck-construct-map-hashtable0): ƒ}[ƒWƒL[‚ÌƒŠƒXƒg“à‚É map ˆÈŠO‚ª‚ ‚Á‚½‚çƒGƒ‰[‚É‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (syck-construct-map-hashtable0): ãƒãƒ¼ã‚¸ã‚­ãƒ¼ã®ãƒªã‚¹ãƒˆå†…ã« map ä»¥å¤–ãŒã‚ã£ãŸã‚‰ã‚¨ãƒ©ãƒ¼ã«ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 	  (syck-symbol-value, syck-symbol-type): new accessor.
 
-	* (structure-description): \‘¢‘Ì‚Ìî•ñ‚ğ alist ‚Å•Ô‚·ŠÖ”BV‹KB
-	  (export-structure0): w’è‚³‚ê‚½ƒJƒeƒSƒŠ‚ÌŠÖ”‚ğ export ‚·‚éB
-	  (export-structure): export-structure0 ‚ğ—˜—pB
+	* (structure-description): æ§‹é€ ä½“ã®æƒ…å ±ã‚’ alist ã§è¿”ã™é–¢æ•°ã€‚æ–°è¦ã€‚
+	  (export-structure0): æŒ‡å®šã•ã‚ŒãŸã‚«ãƒ†ã‚´ãƒªã®é–¢æ•°ã‚’ export ã™ã‚‹ã€‚
+	  (export-structure): export-structure0 ã‚’åˆ©ç”¨ã€‚
 	  (export-condition): ditto.
 
-	* condition ‚ÌƒAƒNƒZƒbƒT‚ğ export ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* condition ã®ã‚¢ã‚¯ã‚»ãƒƒã‚µã‚’ export ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 	* (export-condition): new function.
 
-	* (*xyzzy-yaml-syck-badalias-type-id*): tag:xyzzy.yaml.org,2002:object:yaml-syck:badalias ‚É•ÏXB
+	* (*xyzzy-yaml-syck-badalias-type-id*): tag:xyzzy.yaml.org,2002:object:yaml-syck:badalias ã«å¤‰æ›´ã€‚
 
 	* :string => :scalar
 
-	* ƒ‰ƒCƒuƒ‰ƒŠ‚È‚Ì‚Å ni-autoload ‚Í•s—vB
+	* ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãªã®ã§ ni-autoload ã¯ä¸è¦ã€‚
 
 	* update copyright.
 
 	* - syck-alias => syck-recursive-alias
 	  - seen => parents.
 
-	* (syck-load-internal): callback ‚ğw’è‚³‚ê‚½ê‡‚Í nil ‚ğ•Ô‚·‚æ‚¤‚É‚µ‚½B
+	* (syck-load-internal): callback ã‚’æŒ‡å®šã•ã‚ŒãŸå ´åˆã¯ nil ã‚’è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (syck-load-internal0): •s³‚È YAML ‚ğ—^‚¦‚Ä syck-load ‚·‚é‚Æ :eof ‚ª•Ô‚Á‚Ä‚«‚Ä‚¢‚½‚Ì‚ğC³B
+	* (syck-load-internal0): ä¸æ­£ãª YAML ã‚’ä¸ãˆã¦ syck-load ã™ã‚‹ã¨ :eof ãŒè¿”ã£ã¦ãã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
 	* (syck-construct-map-hashtable0):
 	  ---
@@ -177,30 +177,30 @@
 	    << : [ *CENTER, *BIG ]
 	    label: center/big
 
-	* hash-table ‚â array ‚Å•Ô‚·‚Æ‚«‚É compose! ‚ª¸”s‚µ‚Ä‚¢‚½‚Ì‚ğC³B
+	* hash-table ã‚„ array ã§è¿”ã™ã¨ãã« compose! ãŒå¤±æ•—ã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* #1# ‚Æ‚©‚É‚È‚é‚Ì‚ªA‚¤‚´‚¢‚Ì‚Å•¶š—ñ‚Í copy ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* #1# ã¨ã‹ã«ãªã‚‹ã®ãŒã€ã†ã–ã„ã®ã§æ–‡å­—åˆ—ã¯ copy ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (syck-parser-option): implicit-keyword-p ‚ğ’Ç‰ÁB
-	  (syck-convert-str): implicit-keyword-p ‚©‚Â : ‚©‚çn‚Ü‚éê‡‚Í :keyword ‚É‚µ‚½B
+	* (syck-parser-option): implicit-keyword-p ã‚’è¿½åŠ ã€‚
+	  (syck-convert-str): implicit-keyword-p ã‹ã¤ : ã‹ã‚‰å§‹ã¾ã‚‹å ´åˆã¯ :keyword ã«ã—ãŸã€‚
 
-	* (start-with): ˆø”‚Ì‡”Ô‚ğ subseq seq ‚É•Ï‚¦‚½B
+	* (start-with): å¼•æ•°ã®é †ç•ªã‚’ subseq seq ã«å¤‰ãˆãŸã€‚
 
-	* - (syck-construct-map-hashtable, syck-construct-map-sexp): ƒ}[ƒWƒL[‚ªŒã‚Éo‚Ä‚«‚½ê‡‚ÍA
-	    ‚»‚ê‚Í–³‹‚·‚×‚«BˆÈ‰º‚Ìê‡‚Í x: 2 ‚É‚È‚éB
+	* - (syck-construct-map-hashtable, syck-construct-map-sexp): ãƒãƒ¼ã‚¸ã‚­ãƒ¼ãŒå¾Œã«å‡ºã¦ããŸå ´åˆã¯ã€
+	    ãã‚Œã¯ç„¡è¦–ã™ã¹ãã€‚ä»¥ä¸‹ã®å ´åˆã¯ x: 2 ã«ãªã‚‹ã€‚
 	    - &A { x: 10 }
 	    - x: 2
 	      << : *A
 
-	* (hash-key-exist): gethash ‚Ì–ß‚è’l‚Í 1) key ‚ÉŠÖ˜A•t‚¯‚ç‚ê‚½’lA2) ’l‚ª‘¶İ‚µ‚½‚©‚Ç‚¤‚©‚È‚Ì‚ÅA
-	  –ß‚è’l‚Ì“ñ‚Â–Ú‚ğŒ©‚ê‚Î okB
+	* (hash-key-exist): gethash ã®æˆ»ã‚Šå€¤ã¯ 1) key ã«é–¢é€£ä»˜ã‘ã‚‰ã‚ŒãŸå€¤ã€2) å€¤ãŒå­˜åœ¨ã—ãŸã‹ã©ã†ã‹ãªã®ã§ã€
+	  æˆ»ã‚Šå€¤ã®äºŒã¤ç›®ã‚’è¦‹ã‚Œã° okã€‚
 
 	* (start-with, hash-key-exist): new function.
 
 	* (syck-construct-map-sexp): uniq-by-key => merge-map.
-	  (syck-construct-map-hashtable0): ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOAˆø”‚ğ key ‚É‚µ‚Ä–¼‘O‚ğ•ÏXB
+	  (syck-construct-map-hashtable0): ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã€å¼•æ•°ã‚’ key ã«ã—ã¦åå‰ã‚’å¤‰æ›´ã€‚
 
-	* (syck-convert): implicit-typing-p ‚ğ t ‚É‚µ‚½ê‡Atype ‚ªƒ^ƒO•t‚É‚È‚Á‚Ä‰ğÍ‚É¸”s‚µ‚Ä‚¢‚½‚Ì‚ğC³B
+	* (syck-convert): implicit-typing-p ã‚’ t ã«ã—ãŸå ´åˆã€type ãŒã‚¿ã‚°ä»˜ã«ãªã£ã¦è§£æã«å¤±æ•—ã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
 	* Toggles expansion of types in full taguri.  This
 	  defaults to 1 and is recommended to stay as 1.
@@ -211,9 +211,9 @@
 
 	* update changelog.
 
-	* syck-parser-option ‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÆƒAƒNƒZƒbƒT‚ğ export ‚µ‚½B
+	* syck-parser-option ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¨ã‚¢ã‚¯ã‚»ãƒƒã‚µã‚’ export ã—ãŸã€‚
 
-	* (structure-definition, structure-accessors, export-structure): \‘¢‘ÌŠÖ˜A‚Ìƒ†[ƒeƒBƒŠƒeƒBB
+	* (structure-definition, structure-accessors, export-structure): æ§‹é€ ä½“é–¢é€£ã®ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
 
 	* no need to export raise-xxx.
 
@@ -221,21 +221,21 @@
 
 	* seq-format => seq.
 
-	* (nullp): number ˆÈŠO‚ªw’è‚³‚ê‚½ê‡‚Í zerop ‚µ‚È‚¢B
+	* (nullp): number ä»¥å¤–ãŒæŒ‡å®šã•ã‚ŒãŸå ´åˆã¯ zerop ã—ãªã„ã€‚
 
-	* (syck-parser-set-file, syck-parser-set-string): ˆø”ƒ`ƒFƒbƒN‚Ì‹­‰»B
+	* (syck-parser-set-file, syck-parser-set-string): å¼•æ•°ãƒã‚§ãƒƒã‚¯ã®å¼·åŒ–ã€‚
 
-	* (syck-file-not-found-error, syck-recursive-anchor-error): íœ
-	  (syck-compose-error): ’Ç‰Á
-	  (syck-bad-alias-error): e‚ğ syck-compose-error ‚É‚µ‚½B
+	* (syck-file-not-found-error, syck-recursive-anchor-error): å‰Šé™¤
+	  (syck-compose-error): è¿½åŠ 
+	  (syck-bad-alias-error): è¦ªã‚’ syck-compose-error ã«ã—ãŸã€‚
 
 	* syck-gsub => gsub.
 
-	* ƒp[ƒX’†‚É Ctrl-g ‚µ‚½ê‡ [BUG] ‚É‚È‚é‚Ì‚ğ‰ñ”ğB
+	* ãƒ‘ãƒ¼ã‚¹ä¸­ã« Ctrl-g ã—ãŸå ´åˆ [BUG] ã«ãªã‚‹ã®ã‚’å›é¿ã€‚
 
-	* (compose!): zŠÂQÆ‚ğÀ‘•B
+	* (compose!): å¾ªç’°å‚ç…§ã‚’å®Ÿè£…ã€‚
 
-	* (dump-hash): ƒnƒbƒVƒ…‚Ìƒ_ƒ“ƒvB
+	* (dump-hash): ãƒãƒƒã‚·ãƒ¥ã®ãƒ€ãƒ³ãƒ—ã€‚
 
 	* no need to require api/convert.
 
@@ -247,95 +247,95 @@
 
 	* (clean): add -f to rm.
 
-	* (syck-constructor-function-sequence, syck-constructor-function-map): ˆÊ’u‚ğˆÚ“®‚µ‚½B
+	* (syck-constructor-function-sequence, syck-constructor-function-map): ä½ç½®ã‚’ç§»å‹•ã—ãŸã€‚
 
 	* :hashtable => :hash-table.
 
-	* timestamp-format ‚Æ‚µ‚Ä :string ‚ğ’Ç‰ÁB
+	* timestamp-format ã¨ã—ã¦ :string ã‚’è¿½åŠ ã€‚
 
-	* parser ˆø”‚ª‘«‚è‚È‚©‚Á‚½‚Ì‚ğC³B
+	* parser å¼•æ•°ãŒè¶³ã‚Šãªã‹ã£ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* manifest ƒtƒ@ƒCƒ‹XVB
+	* manifest ãƒ•ã‚¡ã‚¤ãƒ«æ›´æ–°ã€‚
 
-	* - copyright ‚ğ 2007 ‚É‚µ‚½B
-	  - ƒRƒƒ“ƒgC³B
+	* - copyright ã‚’ 2007 ã«ã—ãŸã€‚
+	  - ã‚³ãƒ¡ãƒ³ãƒˆä¿®æ­£ã€‚
 
-	* byte-compile ‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* byte-compile ã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* ƒRƒƒ“ƒgC³B
+	* ã‚³ãƒ¡ãƒ³ãƒˆä¿®æ­£ã€‚
 
-	* syck-current-line, syck-current-column, syck-current-content ‚ğg‚¤‚æ‚¤‚É‚µ‚½B
+	* syck-current-line, syck-current-column, syck-current-content ã‚’ä½¿ã†ã‚ˆã†ã«ã—ãŸã€‚
 
 	* (syck-current-content): rename from syck-linect.
 	  (syck-current-column): new function.
 	  (syck-current-line): ditto.
 
-	* define-library ‚ğg‚Á‚Ä‘‚«Š·‚¦B
+	* define-library ã‚’ä½¿ã£ã¦æ›¸ãæ›ãˆã€‚
 
-	* (syck-load*): parser option ‚ğƒL[ƒ[ƒhƒŠƒXƒg‚Å‚àw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* (syck-load*): parser option ã‚’ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ãƒªã‚¹ãƒˆã§ã‚‚æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (syck-parser-option-schema): ƒL[ƒ[ƒhˆø”‚Ì‚Æ‚è‚¤‚é’l‚Ì§–ñ‚ğ•Ô‚·B
+	* (syck-parser-option-schema): ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å¼•æ•°ã®ã¨ã‚Šã†ã‚‹å€¤ã®åˆ¶ç´„ã‚’è¿”ã™ã€‚
 
-	* (structure-slot-names): \‘¢‘Ì‚Ìƒƒ“ƒo–¼‚ğæ“¾‚·‚éB
-	  (parse-keyword-list): list ‚©‚ç alist ‚Ö‚Ì•ÏŠ·B
+	* (structure-slot-names): æ§‹é€ ä½“ã®ãƒ¡ãƒ³ãƒåã‚’å–å¾—ã™ã‚‹ã€‚
+	  (parse-keyword-list): list ã‹ã‚‰ alist ã¸ã®å¤‰æ›ã€‚
 
-	* syck-parser-option-timestamp-format ‚ğ :list ‚©‚ç :sexp ‚É‚µ‚½B
+	* syck-parser-option-timestamp-format ã‚’ :list ã‹ã‚‰ :sexp ã«ã—ãŸã€‚
 2007-04-24  MIYAMUKO Katsuyuki
 
-	* dll ‚ÌƒAƒ“ƒ[ƒh‚ğ‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	- yaml-syck-ffi:syck-unload-dll: dll ‚ğŠJ•ú
-	- yaml-syck-ffi:syck-reload-dll: dll ‚ğŠJ•ú‚µ‚ÄÄ“Ç‚İ‚İ‚·‚é
+	* dll ã®ã‚¢ãƒ³ãƒ­ãƒ¼ãƒ‰ã‚’ã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	- yaml-syck-ffi:syck-unload-dll: dll ã‚’é–‹æ”¾
+	- yaml-syck-ffi:syck-reload-dll: dll ã‚’é–‹æ”¾ã—ã¦å†èª­ã¿è¾¼ã¿ã™ã‚‹
 
 2007-04-22  MIYAMUKO Katsuyuki
 
-	* yaml-syck 0.0.2 ƒŠƒŠ[ƒX!
+	* yaml-syck 0.0.2 ãƒªãƒªãƒ¼ã‚¹!
 
-	* syck-parser-option ‚Å hash-table-test ‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* syck-parser-option ã§ hash-table-test ã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* xyzzy ƒ_ƒ“ƒvŒã‚ÉƒpƒX‚ª•Ï‚í‚Á‚½ê‡‚É dll ‚Ìƒ[ƒh‚É¸”s‚·‚é‚Ì‚ğC³B
+	* xyzzy ãƒ€ãƒ³ãƒ—å¾Œã«ãƒ‘ã‚¹ãŒå¤‰ã‚ã£ãŸå ´åˆã« dll ã®ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã™ã‚‹ã®ã‚’ä¿®æ­£ã€‚
 
-	* syck-load-documents ‚Ì :from ƒIƒvƒVƒ‡ƒ“‚É :file ‚àw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* syck-load-documents ã® :from ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã« :file ã‚‚æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* util.l ‚ğ•ªŠ„B
+	* util.l ã‚’åˆ†å‰²ã€‚
 
 2007-04-21  MIYAMUKO Katsuyuki
 
-	* timestamp ‚ÌƒtƒH[ƒ}ƒbƒg‚É :iso8601 ‚ğ’Ç‰ÁB
-	iso8601 Œ`®‚Ì•¶š—ñ‚É•ÏŠ·‚·‚éB
+	* timestamp ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã« :iso8601 ã‚’è¿½åŠ ã€‚
+	iso8601 å½¢å¼ã®æ–‡å­—åˆ—ã«å¤‰æ›ã™ã‚‹ã€‚
 
-	* :map ‚É :hash-table ‚ğw’è‚µ‚½‚Æ‚«‚É•Ô‚é hash-table ‚ÌƒeƒXƒgŠÖ”
-	‚ğ equalp ‚©‚ç equal ‚É•ÏXB
+	* :map ã« :hash-table ã‚’æŒ‡å®šã—ãŸã¨ãã«è¿”ã‚‹ hash-table ã®ãƒ†ã‚¹ãƒˆé–¢æ•°
+	ã‚’ equalp ã‹ã‚‰ equal ã«å¤‰æ›´ã€‚
 
 2007-03-25  MIYAMUKO Katsuyuki
 
-	* yaml-syck 0.0.1 ƒŠƒŠ[ƒX!
+	* yaml-syck 0.0.1 ãƒªãƒªãƒ¼ã‚¹!
 
-	* ƒhƒLƒ…ƒƒ“ƒg‹LqB
+	* ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆè¨˜è¿°ã€‚
 
 	* yes => true, no => false
 
 2007-03-24  MIYAMUKO Katsuyuki
 
-	* implicit-typing-p && implicit-keyword-p ‚Ìê‡‚Ì‚İ intern ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* implicit-typing-p && implicit-keyword-p ã®å ´åˆã®ã¿ intern ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* taguri-expassion-p ‚ğíœB
+	* taguri-expassion-p ã‚’å‰Šé™¤ã€‚
 
-	* 0 ƒIƒŠƒWƒ“‚È‚Ì‚Å 1+ ‚µ‚½B
+	* 0 ã‚ªãƒªã‚¸ãƒ³ãªã®ã§ 1+ ã—ãŸã€‚
 
-	* ƒ}[ƒWƒL[‚ÌƒŠƒXƒg“à‚É map ˆÈŠO‚ª‚ ‚Á‚½‚çƒGƒ‰[‚É‚·‚é‚æ‚¤‚É‚µ‚½B
+	* ãƒãƒ¼ã‚¸ã‚­ãƒ¼ã®ãƒªã‚¹ãƒˆå†…ã« map ä»¥å¤–ãŒã‚ã£ãŸã‚‰ã‚¨ãƒ©ãƒ¼ã«ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* condition ‚ÌƒAƒNƒZƒbƒT‚ğ export ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* condition ã®ã‚¢ã‚¯ã‚»ãƒƒã‚µã‚’ export ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* *xyzzy-yaml-syck-badalias-type-id* ‚ğ
-	 tag:xyzzy.yaml.org,2002:object:yaml-syck:badalias ‚É•ÏXB
+	* *xyzzy-yaml-syck-badalias-type-id* ã‚’
+	 tag:xyzzy.yaml.org,2002:object:yaml-syck:badalias ã«å¤‰æ›´ã€‚
 
-	*  ƒ‰ƒCƒuƒ‰ƒŠ‚È‚Ì‚Å ni-autoload ‚Í•s—vB
+	*  ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãªã®ã§ ni-autoload ã¯ä¸è¦ã€‚
 
-	* callback ‚ğw’è‚³‚ê‚½ê‡‚Í nil ‚ğ•Ô‚·‚æ‚¤‚É‚µ‚½B
+	* callback ã‚’æŒ‡å®šã•ã‚ŒãŸå ´åˆã¯ nil ã‚’è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
 
-	* •s³‚È YAML ‚ğ—^‚¦‚Ä syck-load ‚·‚é‚Æ :eof ‚ª•Ô‚Á‚Ä‚«‚Ä‚¢‚½‚Ì‚ğC³B
+	* ä¸æ­£ãª YAML ã‚’ä¸ãˆã¦ syck-load ã™ã‚‹ã¨ :eof ãŒè¿”ã£ã¦ãã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* ”z—ñŒ`®‚Ìƒ}[ƒW‚É‘Î‰B
+	* é…åˆ—å½¢å¼ã®ãƒãƒ¼ã‚¸ã«å¯¾å¿œã€‚
 	---
 	- &CENTER { x: 1, y: 2 }
 	- &BIG { r: 10 }
@@ -343,109 +343,109 @@
 	  << : [ *CENTER, *BIG ]
 	  label: center/big
 
-	* hash-table ‚â array ‚Å•Ô‚·‚Æ‚«‚É compose! ‚ª¸”s‚µ‚Ä‚¢‚½‚Ì‚ğC³B
+	* hash-table ã‚„ array ã§è¿”ã™ã¨ãã« compose! ãŒå¤±æ•—ã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* •¶š—ñ‚Í copy ‚µ‚Ä•Ô‚·‚æ‚¤‚É‚µ‚½B
+	* æ–‡å­—åˆ—ã¯ copy ã—ã¦è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
 
-	* implicit-keyword-p ‚ğ’Ç‰ÁB
+	* implicit-keyword-p ã‚’è¿½åŠ ã€‚
 
-	* merge-key ‚Ì‰ğß‚ªŠÔˆá‚Á‚Ä‚¢‚½‚Ì‚ğC³B
-	‚·‚Å‚É‘¶İ‚·‚éê‡‚Íã‘‚«‚µ‚Ä‚Í‚¢‚¯‚È‚¢BˆÈ‰º‚Í r: 10 ‚É‚È‚éB
+	* merge-key ã®è§£é‡ˆãŒé–“é•ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
+	ã™ã§ã«å­˜åœ¨ã™ã‚‹å ´åˆã¯ä¸Šæ›¸ãã—ã¦ã¯ã„ã‘ãªã„ã€‚ä»¥ä¸‹ã¯ r: 10 ã«ãªã‚‹ã€‚
 	---
 	- &BIG { r: 10 }
 	- r: 100
 	  << : *BIG
 
-	* taguri-expansion-p ‚ª t ‚¾‚Æ‚·‚×‚Ä str ˆµ‚¢‚É‚È‚Á‚Ä‚¢‚½‚Ì‚ğC³B
+	* taguri-expansion-p ãŒ t ã ã¨ã™ã¹ã¦ str æ‰±ã„ã«ãªã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* taguri-expansion-p ‚ğƒfƒtƒHƒ‹ƒg t ‚É‚µ‚½B
+	* taguri-expansion-p ã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ t ã«ã—ãŸã€‚
 
 2007-03-22  MIYAMUKO Katsuyuki
 
-	* syck-parser-option ‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÆƒAƒNƒZƒbƒT‚ğ export ‚µ‚½B
+	* syck-parser-option ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¨ã‚¢ã‚¯ã‚»ãƒƒã‚µã‚’ export ã—ãŸã€‚
 
-	* —áŠOŠÖ˜A‚ğ®—B
+	* ä¾‹å¤–é–¢é€£ã‚’æ•´ç†ã€‚
 
-	* zŠÂQÆ‚ğÀ‘•B
+	* å¾ªç’°å‚ç…§ã‚’å®Ÿè£…ã€‚
 
-	* require ‚ğ®—B
+	* require ã‚’æ•´ç†ã€‚
 
 2007-03-21  MIYAMUKO Katsuyuki
 
-	* timestamp-format ‚Æ‚µ‚Ä string ‚ğ’Ç‰ÁB
+	* timestamp-format ã¨ã—ã¦ string ã‚’è¿½åŠ ã€‚
 
-	* ‚Æ‚è‚ ‚¦‚¸ˆê’Ê‚èŠ®¬B
+	* ã¨ã‚Šã‚ãˆãšä¸€é€šã‚Šå®Œæˆã€‚
 
-	* syck-load ‚Å parser option ‚ğƒL[ƒ[ƒhˆø”‚Åw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* syck-load ã§ parser option ã‚’ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å¼•æ•°ã§æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 	(syck-load "foo: no" :no "NO")
 
 2007-03-17  MIYAMUKO Katsuyuki
 
-	* load-documents ‚ğÀ‘•B
+	* load-documents ã‚’å®Ÿè£…ã€‚
 
-	* parser ü‚è‚ğƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOB
+	* parser å‘¨ã‚Šã‚’ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã€‚
 
-	* symtbl ‚©‚ç sexp ‚Ì\’z‚ğ constructor.l ‚ÉˆÚ“®B
-	array, hash-table ‚ÌƒTƒ|[ƒgB
+	* symtbl ã‹ã‚‰ sexp ã®æ§‹ç¯‰ã‚’ constructor.l ã«ç§»å‹•ã€‚
+	array, hash-table ã®ã‚µãƒãƒ¼ãƒˆã€‚
 
 2007-03-16  MIYAMUKO Katsuyuki
 
-	* config.l ‚ğíœB
-	parser-option ‚Åƒ}ƒbƒsƒ“ƒO‚ğw’è‚·‚é‚æ‚¤‚É‚µ‚½B
+	* config.l ã‚’å‰Šé™¤ã€‚
+	parser-option ã§ãƒãƒƒãƒ”ãƒ³ã‚°ã‚’æŒ‡å®šã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 2007-03-10  MIYAMUKO Katsuyuki
 
-	* ƒXƒyƒVƒƒƒ‹•Ï” *symid*, *symtbl*, *anchor* ‚È‚Ç‚ğ”p~B
-	parser \‘¢‘Ì‚Ì parser-context “à‚É•Û‚·‚é‚æ‚¤‚É‚µ‚½B
+	* ã‚¹ãƒšã‚·ãƒ£ãƒ«å¤‰æ•° *symid*, *symtbl*, *anchor* ãªã©ã‚’å»ƒæ­¢ã€‚
+	parser æ§‹é€ ä½“ã® parser-context å†…ã«ä¿æŒã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* Œ^•ÏŠ·‚Ìƒ^ƒCƒ~ƒ“ƒO‚ğ•ÏXB
-	ƒp[ƒX (resolver) ‚©‚çƒIƒuƒWƒFƒNƒg‚ÌÄ\’z (loader) ‚ÉˆÚ“®‚µ‚½B
+	* å‹å¤‰æ›ã®ã‚¿ã‚¤ãƒŸãƒ³ã‚°ã‚’å¤‰æ›´ã€‚
+	ãƒ‘ãƒ¼ã‚¹æ™‚ (resolver) ã‹ã‚‰ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å†æ§‹ç¯‰æ™‚ (loader) ã«ç§»å‹•ã—ãŸã€‚
 
 2007-01-27  MIYAMUKO Katsuyuki
 
-	* parser ŠÖ˜A‚Ì\‘¢‘Ì‚ğ type/* ‚É•ª—£B
+	* parser é–¢é€£ã®æ§‹é€ ä½“ã‚’ type/* ã«åˆ†é›¢ã€‚
 
 	* syck-version => syck-xyzzy-binding-version.
 	syck-lib-version => syck-version.
 
 2006-10-13  MIYAMUKO Katsuyuki
 
-	* hander.l ‚Ü‚í‚è‚ğƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOB
-	hander.l ‚Ì yaml •ÏŠ·ü‚è‚ğ resolver.l ‚ÉˆÚ“®B
-	hander.l ‚Ì c-callable ‚ğ ffi/callable.l ‚ÉˆÚ“®B
+	* hander.l ã¾ã‚ã‚Šã‚’ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã€‚
+	hander.l ã® yaml å¤‰æ›å‘¨ã‚Šã‚’ resolver.l ã«ç§»å‹•ã€‚
+	hander.l ã® c-callable ã‚’ ffi/callable.l ã«ç§»å‹•ã€‚
 
 2006-10-06  MIYAMUKO Katsuyuki
 
-	* syck-load-documents ‚ğÀ‘•‚·‚é‚½‚ß‚É loader.l ‚ğƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOB
+	* syck-load-documents ã‚’å®Ÿè£…ã™ã‚‹ãŸã‚ã« loader.l ã‚’ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã€‚
 
-	* –³‘Ê‚È require ‚ğíœ‚µ‚ÄˆË‘¶ŠÖŒW‚ğ®—B
+	* ç„¡é§„ãª require ã‚’å‰Šé™¤ã—ã¦ä¾å­˜é–¢ä¿‚ã‚’æ•´ç†ã€‚
 
-	* depends.rb ’Ç‰ÁBˆË‘¶ŠÖŒW‚ğ‹Šo‰»‚·‚éB
+	* depends.rb è¿½åŠ ã€‚ä¾å­˜é–¢ä¿‚ã‚’è¦–è¦šåŒ–ã™ã‚‹ã€‚
 
 	* global.l => config.l
 
-	* syck-timestamp \‘¢‘Ì‚ğ”p~B
+	* syck-timestamp æ§‹é€ ä½“ã‚’å»ƒæ­¢ã€‚
 
 2006-10-03  MIYAMUKO Katsuyuki
 
-	* syck-parse-file -> syck-load ‚È‚ÇŠÖ”‚ğ RbYAML ‚È‚Ç‚Æ‚ ‚í‚¹‚½B
+	* syck-parse-file -> syck-load ãªã©é–¢æ•°ã‚’ RbYAML ãªã©ã¨ã‚ã‚ã›ãŸã€‚
 
-	* parser -> loaderB
+	* parser -> loaderã€‚
 
-	* ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOB
+	* ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã€‚
 
-	* package \¬•ÏXB
+	* package æ§‹æˆå¤‰æ›´ã€‚
 
 2006-09-21  MIYAMUKO Katsuyuki
 
-	* parse ƒGƒ‰[‚ÌƒGƒ‰[ƒƒbƒZ[ƒW‚ğ•ÏXB
+	* parse ã‚¨ãƒ©ãƒ¼æ™‚ã®ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å¤‰æ›´ã€‚
 
-	* syck-parse-error ‚É content ‚Æ source ‚ğ’Ç‰ÁB
-	‚»‚ê‚¼‚êuƒGƒ‰[‚ª”­¶‚µ‚½“à—ev‚Æuƒtƒ@ƒCƒ‹–¼v (•¶š—ñ‚Ìê‡ "(string)")B
+	* syck-parse-error ã« content ã¨ source ã‚’è¿½åŠ ã€‚
+	ãã‚Œãã‚Œã€Œã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ãŸå†…å®¹ã€ã¨ã€Œãƒ•ã‚¡ã‚¤ãƒ«åã€ (æ–‡å­—åˆ—ã®å ´åˆ "(string)")ã€‚
 
 2006-09-15  MIYAMUKO Katsuyuki
 
-	* default ‚Í–¢ƒTƒ|[ƒgB
+	* default ã¯æœªã‚µãƒãƒ¼ãƒˆã€‚
 	(syck-parse-string "
 	- = : 10
 	  x : 20
@@ -453,20 +453,20 @@
 	")
 	;; => (((("x" . 20) ("y" . 30))))
 
-	* float (#fix, #exp) ‚ª•¶š—ñ‚Æ‚µ‚Äˆµ‚í‚ê‚Ä‚¢‚½‚Ì‚ğC³B
+	* float (#fix, #exp) ãŒæ–‡å­—åˆ—ã¨ã—ã¦æ‰±ã‚ã‚Œã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* ÅŒã‚ÌƒhƒLƒ…ƒƒ“ƒg‚ª 2 ‚Â•Ô‚µ‚Ä‚¢‚½‚Ì‚ğC³B
+	* æœ€å¾Œã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆãŒ 2 ã¤è¿”ã—ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
 2006-09-14  MIYAMUKO Katsuyuki
 
-	* syck-eof-p ‚ğ’Ç‰ÁB‚Æ‚è‚ ‚¦‚¸•¡”‚Ì YAML ƒhƒLƒ…ƒƒ“ƒg‚É‘Î‰B
-	API ŒŸ“¢’†B
+	* syck-eof-p ã‚’è¿½åŠ ã€‚ã¨ã‚Šã‚ãˆãšè¤‡æ•°ã® YAML ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã«å¯¾å¿œã€‚
+	API æ¤œè¨ä¸­ã€‚
 
-	* 8 i”‚È‚Ç‚ª‚ ‚é‚ÆƒGƒ‰[‚É‚È‚Á‚Ä‚¢‚½‚Ì‚ğC³B
+	* 8 é€²æ•°ãªã©ãŒã‚ã‚‹ã¨ã‚¨ãƒ©ãƒ¼ã«ãªã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
 2006-09-13  MIYAMUKO Katsuyuki
 
-	* merge Œ^‚É‘Î‰B
+	* merge å‹ã«å¯¾å¿œã€‚
 	(yaml-syck::syck-parse-string "
 	- &A { x: 1 }
 	- x: 1
@@ -476,56 +476,56 @@
 	")
 	http://yaml.org/type/merge.html
 
-	* Ä‹A‚ÌŒŸo‚ªƒoƒO‚Á‚Ä‚¢‚½‚Ì‚ğC³BÄ‹A‚µ‚Ä‚È‚­‚Ä‚àÄ‹A‚Æ”»’f‚³‚ê
-	‚Ä‚¢‚½B
+	* å†å¸°ã®æ¤œå‡ºãŒãƒã‚°ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚å†å¸°ã—ã¦ãªãã¦ã‚‚å†å¸°ã¨åˆ¤æ–­ã•ã‚Œ
+	ã¦ã„ãŸã€‚
 
 2006-09-12  MIYAMUKO Katsuyuki
 
-	* Ä‹A“I‚ÈƒAƒ“ƒJ[‚Í syck-recursive-anchor-error ‚ğ throw
-	‚·‚é‚æ‚¤‚É‚µ‚½B
+	* å†å¸°çš„ãªã‚¢ãƒ³ã‚«ãƒ¼ã¯ syck-recursive-anchor-error ã‚’ throw
+	ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 2006-09-06  MIYAMUKO Katsuyuki
 
-	* syck ‚Ìƒ‰ƒCƒZƒ“ƒX‚ğ doc/COPYING-SYCK ‚Æ‚µ‚Ä’Ç‰ÁB
+	* syck ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’ doc/COPYING-SYCK ã¨ã—ã¦è¿½åŠ ã€‚
 
-	* syck ‚ğ syck-0.61+svn231+patches ‚ÉXV‚µ‚½B
+	* syck ã‚’ syck-0.61+svn231+patches ã«æ›´æ–°ã—ãŸã€‚
 	http://pyyaml.org/download/pysyck/syck-0.61+svn231+patches.tar.gz
 
 2006-09-05  MIYAMUKO Katsuyuki
 
-	* ƒJƒ“ƒ}‹æØ‚è‚Ì”’l‚É‘Î‰‚µ‚½B
+	* ã‚«ãƒ³ãƒåŒºåˆ‡ã‚Šã®æ•°å€¤ã«å¯¾å¿œã—ãŸã€‚
 
-	* ©ŒÈQÆ‚â–¢’è‹`ƒAƒ“ƒJ[‚Í syck-bad-anchor-error ‚ğ throw
-	‚·‚é‚æ‚¤‚É‚µB
+	* è‡ªå·±å‚ç…§ã‚„æœªå®šç¾©ã‚¢ãƒ³ã‚«ãƒ¼ã¯ syck-bad-anchor-error ã‚’ throw
+	ã™ã‚‹ã‚ˆã†ã«ã—ã€‚
 
-	* parse error ‚É‚Í syck-parse-error ‚ğ throw ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* parse error æ™‚ã«ã¯ syck-parse-error ã‚’ throw ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* syck.dll ‚Æ xyck.dll ‚ğƒrƒ‹ƒh‚·‚é‚½‚ß‚Ì makefile ’Ç‰ÁB
+	* syck.dll ã¨ xyck.dll ã‚’ãƒ“ãƒ«ãƒ‰ã™ã‚‹ãŸã‚ã® makefile è¿½åŠ ã€‚
 
-	* api/version.l ’Ç‰ÁB
+	* api/version.l è¿½åŠ ã€‚
 
-	* xyck.dll ‚ğ’Ç‰ÁB
+	* xyck.dll ã‚’è¿½åŠ ã€‚
 
 2006-08-29  MIYAMUKO Katsuyuki
 
-	* ƒtƒ@ƒCƒ‹–¼‚ğw’è‚µ‚Äƒp[ƒX‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* ãƒ•ã‚¡ã‚¤ãƒ«åã‚’æŒ‡å®šã—ã¦ãƒ‘ãƒ¼ã‚¹ã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* timestamp ‚ğƒŠƒXƒgŒ`®‚Å•Ô‚·ƒIƒvƒVƒ‡ƒ“‚ğ’Ç‰ÁB
-	- *yaml-syck-timestamp-format* ‚Ì’l‚Å•ÏX‚Å‚«‚éB
+	* timestamp ã‚’ãƒªã‚¹ãƒˆå½¢å¼ã§è¿”ã™ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¿½åŠ ã€‚
+	- *yaml-syck-timestamp-format* ã®å€¤ã§å¤‰æ›´ã§ãã‚‹ã€‚
 	-- :universal-time => universal time 
-	-- :struct         => syck-timestamp \‘¢‘Ì
-	-- :list           => list Œ`®
+	-- :struct         => syck-timestamp æ§‹é€ ä½“
+	-- :list           => list å½¢å¼
 
 2006-07-22  MIYAMUKO Katsuyuki
 
-	* yaml-syck-api ‚ğ’è‹`‚µ‚ÄƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO‚ª‘å‘ÌI—¹B
-	\‘¢‘Ì‚ÍÅ’áŒÀ‚¾‚¯ wrap ‚·‚éB
-	“à•”‚Å‚µ‚©g‚í‚È‚¢‚Ì‚È‚ç chunk ‚Ì‚Ü‚Üˆµ‚¤‚±‚Æ‚É‚µ‚½B
+	* yaml-syck-api ã‚’å®šç¾©ã—ã¦ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ãŒå¤§ä½“çµ‚äº†ã€‚
+	æ§‹é€ ä½“ã¯æœ€ä½é™ã ã‘ wrap ã™ã‚‹ã€‚
+	å†…éƒ¨ã§ã—ã‹ä½¿ã‚ãªã„ã®ãªã‚‰ chunk ã®ã¾ã¾æ‰±ã†ã“ã¨ã«ã—ãŸã€‚
 
 2006-07-11  MIYAMUKO Katsuyuki
 
-	* parser ‚Íˆê’Ê‚è“®‚­‚æ‚¤‚É‚È‚Á‚½B
-	‘O•ûQÆ‚Æ©ŒÈQÆ‚Í :badalias ‚ğ•Ô‚·‚æ‚¤‚É‚µ‚½B
+	* parser ã¯ä¸€é€šã‚Šå‹•ãã‚ˆã†ã«ãªã£ãŸã€‚
+	å‰æ–¹å‚ç…§ã¨è‡ªå·±å‚ç…§ã¯ :badalias ã‚’è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
 
-	* yaml-syck ì¬ŠJn
+	* yaml-syck ä½œæˆé–‹å§‹
 

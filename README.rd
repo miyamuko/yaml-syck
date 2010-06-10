@@ -1,15 +1,15 @@
 =begin
 
-= yaml-syck - ������������ YAML 1.0 �p�[�T
+= yaml-syck - そこそこ速い YAML 1.0 パーサ
 
-  * Author: �݂�ނ� ���䂫 ((<URL:mailto:miyamuko@gmail.com>))
+  * Author: みやむこ かつゆき ((<URL:mailto:miyamuko@gmail.com>))
   * Home URL: ((<URL:http://miyamuko.s56.xrea.com/xyzzy/yaml-syck/intro.htm>))
   * Version: 0.1.0
 
 
 == NAME
 
-yaml-syck - ������������ YAML 1.0 �p�[�T
+yaml-syck - そこそこ速い YAML 1.0 パーサ
 
 
 == SYNOPSIS
@@ -49,61 +49,61 @@ yaml-syck - ������������ YAML 1.0 �p�[�T
 
 == DESCRIPTION
 
-yaml-syck �� ((<syck|URL:http://code.whytheluckystiff.net/syck/>))
-�𗘗p���� YAML �p�[�T�ł��B
+yaml-syck は ((<syck|URL:http://code.whytheluckystiff.net/syck/>))
+を利用した YAML パーサです。
 
-* YAML �t�@�C�����p�[�X�� S ���ɕϊ��ł��܂��B
-* YAML �� sequence �� S ���܂��� array �ɕϊ����邱�Ƃ��ł��܂��B
-* YAML �� map �� S ���܂��� hash-table �ɕϊ����邱�Ƃ��ł��܂��B
-* YAML �� timestamp �� S ���܂��� universal-time �ɕϊ����邱�Ƃ��ł��܂��B
-* �r���h�ς݂� syck 0.61 + a �𓯍����Ă��܂��B
+* YAML ファイルをパースし S 式に変換できます。
+* YAML の sequence は S 式または array に変換することができます。
+* YAML の map は S 式または hash-table に変換することができます。
+* YAML の timestamp は S 式または universal-time に変換することができます。
+* ビルド済みの syck 0.61 + a を同梱しています。
 
 
 == INSTALL
 
 ((<NetInstaller|URL:http://www7a.biglobe.ne.jp/~hat/xyzzy/ni.html>))
-�ŃC���X�g�[�������ꍇ�� 3 �ȍ~�� OK �ł��B
+でインストールした場合は 3 以降で OK です。
 
-(1) �A�[�J�C�u���_�E�����[�h���܂��B
+(1) アーカイブをダウンロードします。
 
     ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/yaml-syck.zip>))
 
-(2) �A�[�J�C�u��W�J���āA$XYZZY/site-lisp �z���Ƀt�@�C�����R�s�[���܂��B
+(2) アーカイブを展開して、$XYZZY/site-lisp 配下にファイルをコピーします。
 
-(3) yaml-syck �̓��C�u�����ł��B
-    �A�v���P�[�V�����͈ȉ��̃R�[�h�� yaml-syck �𗘗p���邱�Ƃ��ł��܂��B
+(3) yaml-syck はライブラリです。
+    アプリケーションは以下のコードで yaml-syck を利用することができます。
 
       (require "yaml-syck")
       (use-package :yaml-syck)
 
-    use-package ����Ƃ������̃V���{�����p�b�P�[�W�C���q�Ȃ��ŎQ�Ƃł���悤�ɂȂ�܂����A
-    editor �� user �ł� use-package ���Ȃ��ق��������ł��傤�B
+    use-package するといくつかのシンボルがパッケージ修飾子なしで参照できるようになりますが、
+    editor や user では use-package しないほうがいいでしょう。
 
 
 == MODULE
 
 === PACKAGE
 
-yaml-syck �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
+yaml-syck は以下のパッケージを利用しています。
 
   * yaml-syck
   * yaml-syck-util
   * yaml-syck-ffi
 
-nickname �͂���܂���B
+nickname はありません。
 
 === EXPORT
 
-yaml-syck �͈ȉ��̃V���{���� export ���Ă��܂��B
+yaml-syck は以下のシンボルを export しています。
 
-  * yaml-syck �p�b�P�[�W
+  * yaml-syck パッケージ
 
     [API]
     * ((< syck-load >))
     * ((< syck-load-file >))
     * ((< syck-load-documents >))
 
-    [�p�[�T�I�v�V����]
+    [パーサオプション]
     * syck-parser-option
     * ((< make-syck-parser-option >))
 
@@ -121,7 +121,7 @@ yaml-syck �͈ȉ��̃V���{���� export ���Ă��܂��B
     * syck-parser-option-implicit-keyword-p
     * syck-parser-option-implicit-typing-p
 
-    [�o�[�W����]
+    [バージョン]
     * ((< syck-xyzzy-binding-version >))
     * ((< syck-version >))
     * ((< syck-yaml-version >))
@@ -129,7 +129,7 @@ yaml-syck �͈ȉ��̃V���{���� export ���Ă��܂��B
     * ((< syck-yaml-minor-version >))
     * ((< syck-yaml-domain >))
 
-    [��O]
+    [例外]
     * ((<syck-simple-error>))[-*]
     * ((<syck-argument-error>))[-*]
     * ((<syck-runtime-error>))[-*]
@@ -138,18 +138,18 @@ yaml-syck �͈ȉ��̃V���{���� export ���Ă��܂��B
     * ((<syck-bad-alias-error>))[-*]
     * ((<syck-invalid-merge-node-error>))[-*]
 
-  * yaml-syck-util �p�b�P�[�W
+  * yaml-syck-util パッケージ
 
-    * �����p�p�b�P�[�W�Ȃ̂ŏȗ�
+    * 内部用パッケージなので省略
 
-  * yaml-syck-ffi �p�b�P�[�W
+  * yaml-syck-ffi パッケージ
 
-    * �����p�p�b�P�[�W�Ȃ̂ŏȗ�
+    * 内部用パッケージなので省略
 
 
 === CONDITION
 
-yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
+yaml-syck で定義している例外の継承関係は以下のとおりです。
 
 * simple-error
   * ((< syck-simple-error >))
@@ -162,26 +162,26 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
 
 --- syck-simple-error
 
-    yaml-syck �֘A�̂��ׂė�O�̐e�R���f�B�V�����B
+    yaml-syck 関連のすべて例外の親コンディション。
 
 --- syck-runtime-error
 
-    �Ӑ}���Ȃ��G���[�����������ꍇ�ɒʒm������O�B
+    意図しないエラーが発生した場合に通知される例外。
 
 --- syck-argument-error
 
-    �s���Ȉ������w�肵���ꍇ�ɒʒm������O�B
+    不正な引数を指定した場合に通知される例外。
 
 --- syck-parse-error
 
-    YAML �̃p�[�X�G���[�������������ɒʒm������O�B
+    YAML のパースエラーが発生した時に通知される例外。
 
-    syck-parse-error �͈ȉ��̃����o��ێ����Ă��܂��B
+    syck-parse-error は以下のメンバを保持しています。
 
     * source:
 
-      �p�[�X�Ώۂ�Ԃ��܂��B
-      �p�[�X�Ώۂ��t�@�C���̏ꍇ�̓t�@�C�������A������̏ꍇ�� "(string)" ��Ԃ��܂��B
+      パース対象を返します。
+      パース対象がファイルの場合はファイル名を、文字列の場合は "(string)" を返します。
 
         (handler-case
             (syck-load "[1, , 2]")
@@ -198,35 +198,35 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
 
     * line:
 
-      �p�[�X�G���[�����������s�ԍ���Ԃ��܂��B
+      パースエラーが発生した行番号を返します。
 
     * column
 
-      �p�[�X�G���[�����������J������Ԃ��܂��B
+      パースエラーが発生したカラムを返します。
 
     * content
 
-      �p�[�X�G���[�����������ӏ��� YAML �𕶎���ŕԂ��܂��B
+      パースエラーが発生した箇所の YAML を文字列で返します。
 
 --- syck-compose-error
 
-    S���̍\�z���ɃG���[�ɂȂ����ꍇ�ɒʒm������O�ł��B
+    S式の構築中にエラーになった場合に通知される例外です。
 
-    syck-compose-error �͈ȉ��̗�O�̐e�R���f�B�V�����ł��B
-    syck-compose-error ���̂��������邱�Ƃ͂���܂���B
+    syck-compose-error は以下の例外の親コンディションです。
+    syck-compose-error 自体が投げられることはありません。
 
 --- syck-bad-alias-error
 
-    ����`�̃A���J�[���Q�Ƃ����ꍇ�ɒʒm������O�ł��B
+    未定義のアンカーを参照した場合に通知される例外です。
 
       (syck-load "*foo")  ;; => yaml-syck: bad alias error: found undefined alias `foo'.
 
 --- syck-invalid-merge-node-error
 
-    �}�[�W�L�[�̒l���F
+    マージキーの値が：
     * map
-    * map �� sequence
-    �ȊO�̏ꍇ�ɒʒm������O�ł��B
+    * map の sequence
+    以外の場合に通知される例外です。
 
       (syck-load "
       - << : hoge
@@ -241,12 +241,12 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
 
 === VARIABLE
 
-�Ȃ��B
+なし。
 
 
 === COMMAND
 
-�Ȃ��B
+なし。
 
 
 === FUNCTION
@@ -256,15 +256,15 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
     call-seq:
         (syck-load str [options...])  =>  S expression
 
-    YAML �h�L�������g��ǂݍ��� S ���ɕϊ����܂��B
-    �ŏ��� YAML �h�L�������g�̂ݕԂ��܂��B
+    YAML ドキュメントを読み込み S 式に変換します。
+    最初の YAML ドキュメントのみ返します。
 
-    * ���� str �ɂ� YAML �h�L�������g�𕶎���Ŏw�肵�܂��B
-    * ������ȊO���w�肵���ꍇ�� type-error ��O��ʒm���܂�
-    * ���� options �̓p�[�T�I�v�V�������w�肵�܂��B
-      �p�[�T�I�v�V������ syck-parser-option �\���̂܂��̓L�[���[�h���X�g�Ŏw�肵�܂��B
+    * 引数 str には YAML ドキュメントを文字列で指定します。
+    * 文字列以外を指定した場合は type-error 例外を通知します
+    * 引数 options はパーサオプションを指定します。
+      パーサオプションは syck-parser-option 構造体またはキーワードリストで指定します。
 
-      �ȉ��� 2 �̌Ăяo���͓����ł��B
+      以下の 2 つの呼び出しは等価です。
 
         (syck-load "foo: [null, null]" :seq :array :map :hash-table)
 
@@ -272,7 +272,7 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           (setf (syck-parser-option-map opts) :hash-table)
           (syck-load "foo: [null, null]" opts))
 
-    �ȉ��̃I�v�V�������w��\�ł��B
+    以下のオプションを指定可能です。
 
     * ((< null >))
     * ((< true >))
@@ -288,70 +288,70 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
     * ((< implicit-keyword-p >))
 
     : null
-        ((<"YAML �� NULL"|URL:http://yaml.org/type/null.html>)) �ɑΉ����� lisp �̒l���w�肵�܂��B
+        ((<"YAML の NULL"|URL:http://yaml.org/type/null.html>)) に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� nil �ł��B
+        デフォルト値は nil です。
 
-          (syck-load "name: null" :null "null �Ł[��")
-          ;; => (("name" . "null �Ł[��"))
+          (syck-load "name: null" :null "null でーす")
+          ;; => (("name" . "null でーす"))
 
     : true
-        ((<"YAML �� true"|URL:http://yaml.org/type/bool.html>)) �ɑΉ����� lisp �̒l���w�肵�܂��B
+        ((<"YAML の true"|URL:http://yaml.org/type/bool.html>)) に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� t �ł��B
+        デフォルト値は t です。
 
           (syck-load "
           answer: NO
           logical: True
           option: on
-          " :true "�n�C!")
-          ;; => (("answer") ("logical" . #1="�n�C!") ("option" . #1#))
+          " :true "ハイ!")
+          ;; => (("answer") ("logical" . #1="ハイ!") ("option" . #1#))
 
     : false
-        ((<"YAML �� false"|URL:http://yaml.org/type/bool.html>)) �ɑΉ����� lisp �̒l���w�肵�܂��B
+        ((<"YAML の false"|URL:http://yaml.org/type/bool.html>)) に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� nil �ł��B
+        デフォルト値は nil です。
 
           (syck-load "
           answer: NO
           logical: True
           option: on
-          " :false "�Ⴄ��B�S�R�Ⴄ��B")
-          ;; => (("answer" . "�Ⴄ��B�S�R�Ⴄ��B") ("logical" . t) ("option" . t))
+          " :false "違うよ。全然違うよ。")
+          ;; => (("answer" . "違うよ。全然違うよ。") ("logical" . t) ("option" . t))
 
     : nan
-        ((<"YAML �� NaN"|URL:http://yaml.org/type/float.html>)) �ɑΉ����� lisp �̒l���w�肵�܂��B
+        ((<"YAML の NaN"|URL:http://yaml.org/type/float.html>)) に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� 0 �ł��B
+        デフォルト値は 0 です。
 
           (defstruct not-a-number)
           (syck-load "not a number: .NaN" :nan (make-not-a-number))
           ;; => (("negative infinity" . -1.797693134862316d308) ("not a number" . #S(not-a-number)))
 
     : inf
-        ((<"YAML �� +��"|URL:http://yaml.org/type/float.html>)) �ɑΉ����� lisp �̒l���w�肵�܂��B
+        ((<"YAML の +∞"|URL:http://yaml.org/type/float.html>)) に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� most-positive-long-float �ł��B
+        デフォルト値は most-positive-long-float です。
 
-          (syck-load "infinity: .Inf" :inf :��)
-          ;; => (("infinity" . :��))
+          (syck-load "infinity: .Inf" :inf :∞)
+          ;; => (("infinity" . :∞))
 
     : neginf
-        ((<"YAML �� -��"|URL:http://yaml.org/type/float.html>)) �ɑΉ����� lisp �̒l���w�肵�܂��B
+        ((<"YAML の -∞"|URL:http://yaml.org/type/float.html>)) に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� most-negative-long-float �ł��B
+        デフォルト値は most-negative-long-float です。
 
-          (syck-load "negative infinity: .Inf" :inf :-��)
-          ;; => (("negative infinity" . :-��))
+          (syck-load "negative infinity: .Inf" :inf :-∞)
+          ;; => (("negative infinity" . :-∞))
 
     : seq
-        ((<"YAML �� sequence"|URL:http://yaml.org/type/seq.html>)) �̃}�b�s���O���@���w�肵�܂��B
+        ((<"YAML の sequence"|URL:http://yaml.org/type/seq.html>)) のマッピング方法を指定します。
 
-        * ������ :sexp �܂��� :array ���w�肵�܂��B
-        * :sexp ���w�肵���ꍇ�̓��X�g�Ƀ}�b�s���O���܂��B
-        * :array ���w�肵���ꍇ�͔z��Ƀ}�b�s���O���܂��B
+        * 引数は :sexp または :array を指定します。
+        * :sexp を指定した場合はリストにマッピングします。
+        * :array を指定した場合は配列にマッピングします。
 
-        �f�t�H���g�l��:sexp �ł��B
+        デフォルト値は:sexp です。
 
           (syck-load "[1, 2, 3]" :seq :sexp)
           ;; => (1 2 3)
@@ -360,13 +360,13 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;; => #(1 2 3)
 
     : map
-        ((<"YAML �� map"|URL:http://yaml.org/type/map.html>)) �̃}�b�s���O���@���w�肵�܂��B
+        ((<"YAML の map"|URL:http://yaml.org/type/map.html>)) のマッピング方法を指定します。
 
-        * ������ :sexp �܂��� :hash-table ���w�肵�܂��B
-        * :sexp ���w�肵���ꍇ�͊֘A���X�g�Ƀ}�b�s���O���܂��B
-        * :hash-table ���w�肵���ꍇ�� hashtable �Ƀ}�b�s���O���܂��B
+        * 引数は :sexp または :hash-table を指定します。
+        * :sexp を指定した場合は関連リストにマッピングします。
+        * :hash-table を指定した場合は hashtable にマッピングします。
 
-        �f�t�H���g�l��:sexp �ł��B
+        デフォルト値は:sexp です。
 
           (syck-load "{xyzzy: common lisp, emacs: emacs lisp}" :map :sexp)
           ;; => (("xyzzy" . "common lisp") ("emacs" . "emacs lisp"))
@@ -380,29 +380,29 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;; => "emacs lisp"
           ;;    t
 
-        ((<hash-table-test>)) ���Q�Ƃ��Ă��������B
+        ((<hash-table-test>)) も参照してください。
 
     : timestamp
-        ((<"YAML �� timestamp"|URL:http://yaml.org/type/timestamp.html>)) �̃}�b�s���O���@���w�肵�܂��B
+        ((<"YAML の timestamp"|URL:http://yaml.org/type/timestamp.html>)) のマッピング方法を指定します。
 
-        * �����ɂ͈ȉ��̒l���w��\�ł��B
+        * 引数には以下の値を指定可能です。
           * :sexp
           * :universal-time
           * :string
           * :iso8601
 
-        * :sexp ���w�肵���ꍇ�̓��X�g�Ƀ}�b�s���O���܂��B
+        * :sexp を指定した場合はリストにマッピングします。
 
-          * ���X�g�̗v�f���� decode-universal-time �Ɠ���ł��B
+          * リストの要素順は decode-universal-time と同一です。
               (SECOND MINUTE HOUR DAY MONTH YEAR TIME-ZONE)
-          * �������ASECOND �� TIME-ZONE �͏����ɂȂ�ꍇ������̂ŁA
-            ���̂܂܁Aencode-universal-time �� apply ���邱�Ƃ͂ł��܂���B
+          * ただし、SECOND と TIME-ZONE は少数になる場合があるので、
+            そのまま、encode-universal-time に apply することはできません。
 
-        * :universal-time ���w�肵���ꍇ�̓��j�o�[�T���^�C���ɕϊ����܂��B
-        * :string ���w�肵���ꍇ�͕ϊ������ɕ�����̂܂ܕԂ��܂��B
-        * :iso8601 ���w�肵���ꍇ�� iso8601 �`���̕�����ŕԂ��܂��B
+        * :universal-time を指定した場合はユニバーサルタイムに変換します。
+        * :string を指定した場合は変換せずに文字列のまま返します。
+        * :iso8601 を指定した場合は iso8601 形式の文字列で返します。
 
-        �f�t�H���g�l��:universal-time �ł��B
+        デフォルト値は:universal-time です。
 
           (syck-load "2007-03-24T22:10:43.1Z" :timestamp :sexp)
           ;; => (43.1 10 22 24 3 2007 0)
@@ -420,12 +420,12 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;; => 2007-03-24T00:00:00+0900
 
     : hash-table-test
-        hash-table �̃e�X�g�֐����w�肵�܂��B
+        hash-table のテスト関数を指定します。
 
-        * ((<map>)) �� :hash-table ���w�肵���Ƃ��̂ݗL���ȃI�v�V�����ł��B
-        * �w��\�Ȋ֐��� eq, eql, equal, equalp �ł��B
+        * ((<map>)) に :hash-table を指定したときのみ有効なオプションです。
+        * 指定可能な関数は eq, eql, equal, equalp です。
 
-        �f�t�H���g�� equal �ł��B
+        デフォルトは equal です。
 
           (setf h (syck-load "{name: hogehoge}" :map :hash-table))
           ;; => #<hashtable 52893564>
@@ -450,12 +450,12 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;;    t
 
     : implicit-typing-p
-        ���l����t��ϊ����邩�ǂ������w�肵�܂��B
+        数値や日付を変換するかどうかを指定します。
 
-        * non-nil ���w�肷��ƌ^�ϊ����܂��B
-        * nil ���w�肷��ƕϊ������ɕ�����̂܂ܕԂ��܂��B
+        * non-nil を指定すると型変換します。
+        * nil を指定すると変換せずに文字列のまま返します。
 
-        �f�t�H���g�l�� t �ł��B
+        デフォルト値は t です。
 
           (syck-load "
           date: 2007-03-24T22:10:43.1Z
@@ -472,14 +472,14 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;; => (("date" . "2007-03-24T22:10:43.1Z") ("bool" . "true") ("number" . "123"))
 
     : implicit-keyword-p
-        �R�����Ŏn�܂镶������L�[���[�h�ɕϊ� (keyword �p�b�P�[�W���� intern)
-        ���邩�ǂ������w�肵�܂��B
+        コロンで始まる文字列をキーワードに変換 (keyword パッケージ内に intern)
+        するかどうかを指定します。
 
-        * non-nil ���w�肷��� keyword �ɕϊ����܂��B
-        * nil ���w�肷��ƕϊ������ɕ�����̂܂ܕԂ��܂��B
-        * ���̈����� ((<implicit-typing-p>)) �� non-nil �̏ꍇ�̂ݗL���ł��B
+        * non-nil を指定すると keyword に変換します。
+        * nil を指定すると変換せずに文字列のまま返します。
+        * この引数は ((<implicit-typing-p>)) が non-nil の場合のみ有効です。
 
-        �f�t�H���g�l�� nil �ł��B
+        デフォルト値は nil です。
 
           (syck-load "
           :date: 2007-03-24T22:10:43.1Z
@@ -488,7 +488,7 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           " :implicit-keyword-p t)
           ;; => ((:date . 3383763043) (:bool . t) (:number . 123))
 
-        �� YAML �̎d�l�ɂ͂Ȃ��g���ł��B
+        ※ YAML の仕様にはない拡張です。
 
 
 --- syck-load-file
@@ -496,13 +496,13 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
     call-seq:
          (syck-load-file filename [options...])  =>  S expression
 
-    YAML �t�@�C����ǂݍ��� S ���ɕϊ����܂��B
-    �ŏ��� YAML �h�L�������g�̂ݕԂ��܂��B
+    YAML ファイルを読み込み S 式に変換します。
+    最初の YAML ドキュメントのみ返します。
 
-    filename �ɕs���Ȓl���w�肵���ꍇ�͈ȉ��̗�O���ʒm����܂��B
-    * ������ȊO���w�肵���ꍇ�� type-error
-    * ���݂��Ȃ��t�@�C�������ꍇ�� file-not-found
-    * �t�@�C���� open �Ɏ��s�����ꍇ�� file-error
+    filename に不正な値を指定した場合は以下の例外が通知されます。
+    * 文字列以外を指定した場合は type-error
+    * 存在しないファイルした場合は file-not-found
+    * ファイルの open に失敗した場合は file-error
 
 --- syck-load-documents
 
@@ -513,15 +513,15 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
                              :callback #'(lambda (ydoc) ...))
         => nil or list of yaml documents.
 
-    YAML �h�L�������g���ЂƂ��ǂݍ��݁A�w�肳�ꂽ callback �����s���܂��B
+    YAML ドキュメントをひとつずつ読み込み、指定された callback を実行します。
 
-    * callback ���w�肵�Ȃ��ꍇ�͂��ׂẴh�L�������g��ǂݍ��݃��X�g�ŕԂ��܂��B
-    * �t�@�C������ǂݍ��ޏꍇ�� :from �� :file �܂��� :filename ���w�肵�܂��B
-    * ������ǂݍ��ޏꍇ�� :from �� :string ���w�肵�܂� (�f�t�H���g)�B
-    * �p�[�T�I�v�V������ :option �����ɃL�[���[�h���X�g�܂��� syck-parser-option �\���̂Ŏw�肵�܂��B
+    * callback を指定しない場合はすべてのドキュメントを読み込みリストで返します。
+    * ファイルから読み込む場合は :from に :file または :filename を指定します。
+    * 文字列読み込む場合は :from に :string を指定します (デフォルト)。
+    * パーサオプションは :option 引数にキーワードリストまたは syck-parser-option 構造体で指定します。
 
-    ((<syck-load>)) �� ((<syck-load-file>)) �͍ŏ��� YAML �h�L�������g�����ǂݍ��݂܂���B
-    ������ YAML �h�L�������g��ǂݍ��݂����ꍇ�͂��̊֐��𗘗p���Ă��������B
+    ((<syck-load>)) や ((<syck-load-file>)) は最初の YAML ドキュメントしか読み込みません。
+    複数の YAML ドキュメントを読み込みたい場合はこの関数を利用してください。
 
       (syck-load-documents "config.yaml"
                            :from :filename
@@ -556,127 +556,127 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
          :implicit-typing-p t)
         => syck-parser-option
 
-    syck-parser-option �\���̂��쐬���܂��B
-    �p�[�T�I�v�V�����ɂ��Ă� ((<syck-load>)) ���Q�Ƃ��Ă��������B
+    syck-parser-option 構造体を作成します。
+    パーサオプションについては ((<syck-load>)) を参照してください。
 
 --- syck-xyzzy-binding-version
 
     call-seq:
         (syck-xyzzy-binding-version)  =>  "majar.minor.teeny"
 
-    syck �� xyzzy �o�C���f�B���O (�{���C�u�����̂���) �̃o�[�W������Ԃ��܂��B
+    syck の xyzzy バインディング (本ライブラリのこと) のバージョンを返します。
 
-    �o�[�W������ major.minor.teeny �Ƃ����`���ł��B
-    ���ꂼ��̔ԍ��͕K�� 1 ���ɂ���̂ŁA�ȉ��̂悤�ɔ�r���邱�Ƃ��ł��܂�
-    (Ruby �Ɠ����ł� :-)�B
+    バージョンは major.minor.teeny という形式です。
+    それぞれの番号は必ず 1 桁にするので、以下のように比較することができます
+    (Ruby と同じです :-)。
 
         (if (string<= "1.1.0" (syck-xyzzy-binding-version))
-            (1.1.0 �ȍ~�ŗL���ȏ���)
-          (1.1.0 ���O�̃o�[�W�����ł̏���))
+            (1.1.0 以降で有効な処理)
+          (1.1.0 より前のバージョンでの処理))
 
 --- syck-version
 
     call-seq:
         (syck-version)  =>  "major.minor"
 
-    syck ���̂̃o�[�W������Ԃ��܂��B
+    syck 自体のバージョンを返します。
 
 --- syck-yaml-version
 
     call-seq:
         (syck-yaml-version)  =>  "major.minor"
 
-    syck ���������Ă��� YAML �d�l�̃o�[�W�����𕶎���ŕԂ��܂��B
-    �o�[�W������ "major.minor" �Ƃ����`���ł��B
+    syck が実装している YAML 仕様のバージョンを文字列で返します。
+    バージョンは "major.minor" という形式です。
 
 --- syck-yaml-major-version
 
     call-seq:
         (syck-yaml-major-version)  =>  major version number
 
-    syck ���������Ă��� YAML �d�l�̃��W���[�o�[�W�����𐔒l�ŕԂ��܂��B
+    syck が実装している YAML 仕様のメジャーバージョンを数値で返します。
 
 --- syck-yaml-minor-version
 
     call-seq:
         (syck-yaml-minor-version)  =>  minor version number
 
-    syck ���������Ă��� YAML �d�l�̃}�C�i�[�o�[�W�����𐔒l�ŕԂ��܂��B
+    syck が実装している YAML 仕様のマイナーバージョンを数値で返します。
 
 --- syck-yaml-domain
 
     call-seq:
         (syck-yaml-domain)  =>  "yaml domain"
 
-    syck ���������Ă��� YAML �d�l�̃h���C����Ԃ��܂��B
+    syck が実装している YAML 仕様のドメインを返します。
 
 
 == LIMITATIONS
 
-* YAML �`���ł� dump �̓T�|�[�g���Ă��܂���B
+* YAML 形式での dump はサポートしていません。
 
-* map �� default �̓T�|�[�g���Ă��܂���B
+* map の default はサポートしていません。
 
-  �ȉ��̂悤�� default �l�̎w��͒P���ɖ�������܂��B
+  以下のような default 値の指定は単純に無視されます。
 
     ---
     = : 10
     x : 20
     y : 30
 
-* YPath �̓T�|�[�g���Ă��܂���B
+* YPath はサポートしていません。
 
-* syck ���T�|�[�g���Ă��� YAML �̃o�[�W������ 1.0 �����ł��B
-  �������̃f�[�^�^�͐������F������܂���B
+* syck がサポートしている YAML のバージョンは 1.0 相当です。
+  いくつかのデータ型は正しく認識されません。
 
 
 == KNOWN BUGS
 
-* �z�Q�Ƃ��܂� list �� format ���悤�Ƃ���� xyzzy �������܂��B
-  �z�Q�Ƃ��܂� YAML �� syck-load �����Ƃ��͒��ӂ��Ă��������B
+* 循環参照を含む list を format しようとすると xyzzy が落ちます。
+  循環参照を含んだ YAML を syck-load したときは注意してください。
 
-  �Č��R�[�h (���s����� xyzzy �������܂�)�F
+  再現コード (実行すると xyzzy が落ちます)：
 
     (setf recursive-node '(1))
     ;; => (1)
     (setf (nth 0 recursive-node) recursive-node)
     ;; => #1=(#1#)
     (format nil "~A" recursive-node)
-    ;; => �N���b�V��
+    ;; => クラッシュ
 
-  �� xyzzy ���̂̃o�O�ł��B
+  ※ xyzzy 自体のバグです。
 
-* ((< syck-parse-error >)) �����������ꍇ content ���s���ɂȂ�ꍇ������܂��B
+* ((< syck-parse-error >)) が発生した場合 content が不正になる場合があります。
 
-  �Č��R�[�h�F
+  再現コード：
 
     (handler-case
         (syck-load "[1, 2")
       (syck-parse-error (c)
         (syck-parse-error-content c)))
 
-  �� syck ���̂̃o�O�ł��B
+  ※ syck 自体のバグです。
 
-* yaml-syck �܂��� syck ���̂̃o�O�ɂ�� xyzzy ���ƃN���b�V������\��������̂�
-  auto-save-buffers ���g���Ă��������B�B�B
+* yaml-syck または syck 自体のバグにより xyzzy ごとクラッシュする可能性があるので
+  auto-save-buffers を使ってください。。。
 
 
 == TODO
 
-* sexp->yaml �_���v�̃T�|�[�g (emitter)�B
-* syck.dll �ŃG���[�ɂȂ��Ă� xyzzy ���Ɨ����Ȃ��悤�ɂ���B
-* ���� lisp �����n�̃T�|�[�g�B
-* parse ���� Ctrl-g �Ŏ~�߂��悤�ɂ���B
-* mingw �ȊO�ŃR���p�C���B
-* �o�b�t�@���� load (load-documents :from :buffer)
-* �X�g���[������ load-documents :from :stream
-* default �̃T�|�[�g (�Ǝ��\����?)
-* c-enum �̐���
+* sexp->yaml ダンプのサポート (emitter)。
+* syck.dll でエラーになっても xyzzy ごと落ちないようにする。
+* 他の lisp 処理系のサポート。
+* parse 中に Ctrl-g で止めれるようにする。
+* mingw 以外でコンパイル。
+* バッファから load (load-documents :from :buffer)
+* ストリームから load-documents :from :stream
+* default のサポート (独自構造体?)
+* c-enum の整理
   * (yaml-syck-ffi::syck-kind-tag-enum-name 4)
     nil
     => range error
   * (yaml-syck-ffi::syck-kind-tag-enum)
-    => �p�~
+    => 廃止
   * (yaml-syck-ffi::syck-kind-tag-enum-name :syck-str-kind)
     nil
     => :syck-str-kind
@@ -684,12 +684,12 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
 
 == AUTHOR
 
-�݂�ނ� ���䂫 (((<URL:mailto:miyamuko (at) gmail.com>)))
+みやむこ かつゆき (((<URL:mailto:miyamuko (at) gmail.com>)))
 
 
 == SEE ALSO
 
-  : Rubyist Magazine - �v���O���}�[�̂��߂� YAML ���� (������)
+  : Rubyist Magazine - プログラマーのための YAML 入門 (初級編)
         ((<URL:http://jp.rubyist.net/magazine/?0009-YAML>))
 
   : ( Syck ): YAML for Ruby, Python, PHP and OCaml
@@ -707,13 +707,13 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
   : libyaml
         ((<URL:http://pyyaml.org/wiki/LibYAML>))
 
-  : 1 ���ł킩�� YAML �O�j
+  : 1 分でわかる YAML 前史
         ((<URL:http://www.rubycolor.org/maki/d/200305b.html#11_t1>))
 
-  : Perl����/YAML/PyYAML��Perl�ڐA�v���W�F�N�g�i2006.08�j - Walrus, Digit.
+  : Perlメモ/YAML/PyYAMLのPerl移植プロジェクト（2006.08） - Walrus, Digit.
         ((<URL:http://digit.que.ne.jp/work/index.cgi?Perl%e3%83%a1%e3%83%a2%2fYAML%2fPyYAML%e3%81%aePerl%e7%a7%bb%e6%a4%8d%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%ef%bc%882006%2e08%ef%bc%89>))
 
-  : YAML �p�[�T�̃x���`�}�[�N
+  : YAML パーサのベンチマーク
         ((<URL:http://d.hatena.ne.jp/miyamuko/20070401/>))
 
 
@@ -721,26 +721,26 @@ yaml-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
 
 === yaml-syck (this library)
 
-yaml-syck �� MIT/X ���C�Z���X�ɂ��������ė��p�\�ł��B
+yaml-syck は MIT/X ライセンスにしたがって利用可能です。
 
 See yaml-syck/docs/MIT-LICENSE for full license.
 
 === syck
 
-syck �� "why the lucky stiff" �ɂ��쐬����A
-BSD style ���C�Z���X�Ń����[�X����Ă܂��B
+syck は "why the lucky stiff" により作成され、
+BSD style ライセンスでリリースされてます。
 
 See yaml-syck/docs/COPYING-SYCK for full license.
 
 
 === syck.dll
 
-�{���C�u�����ɓ������Ă��� syck.dll ��
+本ライブラリに同梱している syck.dll は
 ((<PySyck|URL:http://pyyaml.org/wiki/PySyck>))
-�̍�҂� Kirill Simonov ���ɂ�胊���[�X����Ă���
-unofficial ��
+の作者の Kirill Simonov 氏によりリリースされている
+unofficial な
 ((<"syck-0.61+svn231+patches.tar.gz"|URL:http://pyyaml.org/download/pysyck/syck-0.61+svn231+patches.tar.gz>))
-�𗘗p���Ă��܂��B
+を利用しています。
 
 
 == NEWS

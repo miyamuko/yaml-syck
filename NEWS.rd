@@ -2,69 +2,69 @@
 
 === 2008-02-03 / 0.1.0
 
-yaml-syck 0.1.0 �����[�X!
+yaml-syck 0.1.0 リリース!
 
-: �V�K�@�\
+: 新規機能
 
-    * �Ȃ�
+    * なし
 
-: ��݊����܂ޕύX�_
+: 非互換を含む変更点
 
-    * �Ȃ�
+    * なし
 
-: �o�O�C��
+: バグ修正
 
-    * �N���b�V�����ɂ�����������B
+    * クラッシュしにくくしたつもり。
 
 
 === 2008-01-22 / 0.0.3
 
-yaml-syck 0.0.3 �����[�X!
+yaml-syck 0.0.3 リリース!
 
-: �V�K�@�\
+: 新規機能
 
-    * dll �̃A�����[�h���ł���悤�ɂ����B
-      * (yaml-syck-ffi:syck-unload-dll): dll ���J��
-      * (yaml-syck-ffi:syck-reload-dll): dll ���J�����čēǂݍ��݂���
+    * dll のアンロードをできるようにした。
+      * (yaml-syck-ffi:syck-unload-dll): dll を開放
+      * (yaml-syck-ffi:syck-reload-dll): dll を開放して再読み込みする
 
-: ��݊����܂ޕύX�_
+: 非互換を含む変更点
 
-    * �Ȃ�
+    * なし
 
-: �o�O�C��
+: バグ修正
 
-    * syck-load �Ɏw�肵�������񂩂� si:make-string-chunk �Ŋm�ۂ����������̈悪
-      GC ����Ă��܂��N���b�V�����Ă����̂��C���B
+    * syck-load に指定した文字列から si:make-string-chunk で確保したメモリ領域が
+      GC されてしまいクラッシュしていたのを修正。
 
 
 === 2007-04-22 / 0.0.2
 
-yaml-syck 0.0.2 �����[�X!
+yaml-syck 0.0.2 リリース!
 
-: �V�K�@�\
-    * syck-load-documents �� :from �I�v�V������ :filename �̑��� :file ���w��ł���悤�ɂ��܂����B
-    * timestamp �̃t�H�[�}�b�g�� :iso8601 ��ǉ����܂����B
-      iso8601 �`���̕�����ɕϊ����܂��B
-    * �p�[�T�I�v�V������ :hash-table-test ��ǉ����܂����B
+: 新規機能
+    * syck-load-documents の :from オプションに :filename の他に :file も指定できるようにしました。
+    * timestamp のフォーマットに :iso8601 を追加しました。
+      iso8601 形式の文字列に変換します。
+    * パーサオプションに :hash-table-test を追加しました。
 
-      �p�[�T�I�v�V���� :map �� :hash-table ���w�肵���Ƃ��ɕԂ�
-      hash-table �̃e�X�g�֐����w��ł��܂��B
+      パーサオプション :map に :hash-table を指定したときに返る
+      hash-table のテスト関数を指定できます。
 
-: ��݊����܂ޕύX�_
-    * hash-table �̃e�X�g�֐��̃f�t�H���g�� equalp ���� equal �ɕύX���܂����B
+: 非互換を含む変更点
+    * hash-table のテスト関数のデフォルトを equalp から equal に変更しました。
 
-      hash-table-test �� #'equalp ���w�肷�邱�Ƃŏ]���ʂ�̓���ɂȂ�܂��B
+      hash-table-test に #'equalp を指定することで従来通りの動作になります。
 
         (syck-load "{a: b}" :map :hash-table :hash-table-test #'equalp)
 
-: �o�O�C��
-    * xyzzy �_���v��� xyzzy �̃p�X���ς�����ꍇ�� dll �̃��[�h�����s����̂��C�����܂����B
+: バグ修正
+    * xyzzy ダンプ後に xyzzy のパスが変わった場合に dll のロードが失敗するのを修正しました。
 
-      (USB �������ɓ���Ď����^�ԏꍇ�Ȃ�) �p�X���Œ肳��Ȃ����ł����Ȃ����p�ł��܂��B
+      (USB メモリに入れて持ち運ぶ場合など) パスが固定されない環境でも問題なく利用できます。
 
 
 === 2007-03-25 / 0.0.1
 
-yaml-syck 0.0.1 �����[�X!
+yaml-syck 0.0.1 リリース!
 
 =end
