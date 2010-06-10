@@ -18,5 +18,4 @@ files:
     - site-lisp/**/docs/*
     - site-lisp/**/src/*
   exclude:
-    - site-lisp/yaml-syck-scratch.l
     - site-lisp/yaml-syck/**/test-*.l
